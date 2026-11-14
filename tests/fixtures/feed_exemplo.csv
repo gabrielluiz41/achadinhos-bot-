@@ -1,0 +1,9 @@
+itemid,shopid,title,price,sale_price,discount_percentage,image_link,product_short link,global_category1,global_category2,shop_name,is_official_shop,item_sold,item_rating,stock
+1001,9,Fita LED 5m RGB com Controle Remoto Bluetooth,59.90,24.90,58,,https://s.shopee.com.br/exemplo1,Casa e Construção,Iluminação,Loja Oficial X,1,5400,4.8,100
+1002,9,Suplemento Termogênico Emagrecedor 60 cápsulas,89.90,39.90,55,,https://s.shopee.com.br/exemplo2,Beleza,Cuidados,Loja Y,0,900,4.5,10
+1003,9,Faca Tática Inox com Bainha,49.90,29.90,40,,https://s.shopee.com.br/exemplo3,Esportes,Camping,Loja Z,0,300,4.7,10
+1004,9,Papel de Presente Kraft Natal 10 Folhas,19.90,9.90,50,,https://s.shopee.com.br/exemplo4,Casa,Festas,Loja W,1,12000,4.9,500
+1005,9,Copo Térmico 1200ml Aço Inox com Tampa e Canudo,99.90,34.90,65,,https://s.shopee.com.br/exemplo5,Casa,Cozinha,Loja V,0,8000,4.8,50
+1006,9,Armário Organizador de Sapatos 6 Prateleiras,129.90,79.90,38,,https://s.shopee.com.br/exemplo6,Casa,Organização,Loja U,0,700,4.6,20
+1007,9,Vape Pod Descartável 5000 puffs,59.90,39.90,33,,https://s.shopee.com.br/exemplo7,Outros,Outros,Loja T,0,100,4.0,10
+1008,9,Cadeirinha Infantil Para Carro 0-25kg,399.90,199.90,50,,https://s.shopee.com.br/exemplo8,Bebês,Passeio,Loja S,0,50,4.5,5

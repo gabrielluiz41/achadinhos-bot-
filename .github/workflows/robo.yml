@@ -1,0 +1,63 @@
+name: Robô de achadinhos
+
+on:
+  schedule:
+    # Picos no Brasil (UTC-3): 12h07, 18h07 e 21h07
+    - cron: "7 15 * * *"
+    - cron: "7 21 * * *"
+    - cron: "7 0 * * *"
+  workflow_dispatch:
+    inputs:
+      quantidade:
+        description: "Vídeos nesta rodada"
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robo-achadinhos
+  cancel-in-progress: false
+
+jobs:
+  rodada:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Dependências
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q -r requirements.txt
+      - name: Testes
+        run: python -m pytest -q
+        env:
+          TTS: "0"
+      - name: Rodada (gera vídeo, capa e legenda)
+        env:
+          SHOPEE_FEED_URL_OFICIAL: ${{ secrets.SHOPEE_FEED_URL_OFICIAL }}
+          SHOPEE_FEED_URL_BRASIL: ${{ secrets.SHOPEE_FEED_URL_BRASIL }}
+          POSTS_POR_RODADA: ${{ github.event.inputs.quantidade || '1' }}
+          # Publicação DESLIGADA até o Gabriel cadastrar as credenciais das contas comerciais.
+          PUBLICAR: "0"
+        run: python -m bot.main
+      - name: Vídeos para revisão
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: achadinhos-${{ github.run_number }}
+          path: saida/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Grava histórico e relatório
+        if: success()
+        run: |
+          git config user.name "achadinhos-bot"
+          git config user.email "achadinhos-bot@users.noreply.github.com"
+          git add data/historico.json data/relatorio.json
+          git diff --cached --quiet || git commit -m "robô: rodada $(date -u +%Y-%m-%dT%H:%M)Z"
+          git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}"
