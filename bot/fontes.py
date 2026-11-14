@@ -12,6 +12,7 @@ import csv
 import gzip
 import io
 import os
+import sys
 import zipfile
 from dataclasses import dataclass, asdict, field
 
@@ -110,12 +111,11 @@ def _texto_csv(conteudo: bytes) -> str:
 
 def parse_csv(texto: str, fonte: str, forcar_oficial: bool = False) -> tuple[list[Produto], list[str]]:
     """Devolve (produtos, nomes_das_colunas). Nomes de coluna não são segredo."""
-    amostra = texto[:4096]
-    try:
-        dialeto = csv.Sniffer().sniff(amostra, delimiters=",;\t|")
-    except csv.Error:
-        dialeto = csv.excel
-    leitor = csv.DictReader(io.StringIO(texto), dialect=dialeto)
+    # Delimitador pela 1ª linha; aspas sempre '"' (o Sniffer erra em feeds com descrição longa).
+    cabecalho = texto.split("\n", 1)[0]
+    delim = max([",", ";", "\t", "|"], key=cabecalho.count)
+    csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
+    leitor = csv.DictReader(io.StringIO(texto, newline=""), delimiter=delim, quotechar='"')
     colunas = [c.strip() for c in (leitor.fieldnames or [])]
     produtos: list[Produto] = []
     for bruto in leitor:
@@ -184,7 +184,11 @@ class FonteFeedShopee:
             status = getattr(getattr(e, "response", None), "status_code", "")
             self.erro = f"falha ao baixar {self.env_url}: {type(e).__name__} {status}".strip()
             return []
-        produtos, self.colunas = parse_csv(_texto_csv(buf.getvalue()), self.nome, self.oficial)
+        try:
+            produtos, self.colunas = parse_csv(_texto_csv(buf.getvalue()), self.nome, self.oficial)
+        except Exception as e:  # feed com formato inesperado: registra e segue com a outra fonte
+            self.erro = f"falha ao ler {self.env_url}: {type(e).__name__}: {str(e)[:120]}"
+            return []
         return produtos
 
 

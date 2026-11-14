@@ -83,3 +83,11 @@ def test_rodada_completa_offline(tmp_path, monkeypatch):
     assert "Achei, e é barato! Link na bio." in leg and "afiliado" in leg
     rel = json.load(open(tmp_path / "relatorio.json", encoding="utf-8"))
     assert rel["publicacao"].startswith("desligada")
+
+
+def test_feed_com_quebra_de_linha_e_crlf():
+    txt = ('itemid,shopid,title,description,price,sale_price,product_link\r\n'
+           '1,2,"Mop Giratório","linha 1\r\nlinha 2, com vírgula",49.90,29.90,https://x/1\r\n'
+           "3,4,Escorredor d'água,\"desc 'aspas'\",19.90,9.90,https://x/3\r\n")
+    ps, cols = parse_csv(txt, "t")
+    assert cols[3] == "description" and [p.id for p in ps] == ["2-1", "4-3"]
