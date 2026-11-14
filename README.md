@@ -31,3 +31,9 @@ TTS=0 python -m bot.main --csv tests/fixtures/feed_exemplo.csv --sem-imagem --na
 ```
 
 Fonte Montserrat (SIL OFL, `assets/fonts/OFL.txt`).
+
+## Vitrine (link da bio) e políticas
+Cada rodada regenera `docs/` a partir de `data/historico.json`: `index.html` (achadinhos dos últimos 14 dias,
+com link de afiliado), `privacidade.html` e `termos.html` (pt-BR e inglês, exigidos na auditoria do TikTok e no app Meta).
+Para publicar: Settings > Pages > Deploy from a branch > `main` / `/docs`. GitHub Pages em repositório privado
+exige plano pago; no plano grátis, torne o repositório público (não há segredos no código) ou use um repositório público só para a vitrine.

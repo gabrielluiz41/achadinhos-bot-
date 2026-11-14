@@ -17,7 +17,7 @@ import re
 import sys
 from datetime import datetime, timezone
 
-from . import arte, video
+from . import arte, video, vitrine
 from .fontes import FonteArquivo, fontes_padrao
 from .selecao import escolher
 
@@ -127,7 +127,8 @@ def main(argv=None) -> int:
             f.write(legenda(gancho, pd, nicho) + f"\n\nLINK PARA A BIO: {p.link}\n")
         item = {"id": p.id, "quando": agora.isoformat(timespec="seconds"), "titulo": p.titulo,
                 "preco": p.preco, "nicho": (nicho or {}).get("nome", ""), "gancho": gancho,
-                "fonte": p.fonte, "oficial": p.oficial, "link": p.link,
+                "fonte": p.fonte, "oficial": p.oficial, "link": p.link, "imagem": p.imagem,
+                "preco_original": p.preco_original,
                 "arquivos": [os.path.basename(x) for x in (capa, mp4) if x], "publicado": False}
         gerados.append(item)
         print(f"gerado: {item['nicho'] or '-'} | {gancho} | {arte.preco_br(p.preco)} | {p.titulo[:60]}")
@@ -151,6 +152,7 @@ def main(argv=None) -> int:
         historico = [h for h in historico if (agora - datetime.fromisoformat(h["quando"])).days <= 60]
         gravar_json("historico.json", historico)
         gravar_json("relatorio.json", relatorio)
+        vitrine.gerar_site(historico, os.path.join(RAIZ, "docs"), agora)
     with open(os.path.join(args.saida, "relatorio.json"), "w", encoding="utf-8") as f:
         json.dump(relatorio, f, ensure_ascii=False, indent=2)
 

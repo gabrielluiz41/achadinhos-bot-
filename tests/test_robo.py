@@ -91,3 +91,27 @@ def test_feed_com_quebra_de_linha_e_crlf():
            "3,4,Escorredor d'água,\"desc 'aspas'\",19.90,9.90,https://x/3\r\n")
     ps, cols = parse_csv(txt, "t")
     assert cols[3] == "description" and [p.id for p in ps] == ["2-1", "4-3"]
+
+
+def test_vitrine_e_politicas(tmp_path):
+    from bot import vitrine
+    agora = datetime(2026, 11, 15, 12, tzinfo=timezone.utc)
+    hist = [
+        {"id": "1", "quando": (agora - timedelta(days=1)).isoformat(), "titulo": "Pisca <b>pisca</b>",
+         "preco": 19.9, "preco_original": 39.9, "link": "https://s.shopee.com.br/abc", "imagem": "https://cf.shopee/x.jpg"},
+        {"id": "2", "quando": (agora - timedelta(days=20)).isoformat(), "titulo": "Velho",
+         "preco": 9.9, "link": "https://s.shopee.com.br/old"},
+        {"id": "3", "quando": agora.isoformat(), "titulo": "Sem link seguro", "preco": 5.0,
+         "link": "javascript:alert(1)"},
+    ]
+    arquivos = vitrine.gerar_site(hist, str(tmp_path), agora)
+    assert len(arquivos) == 3
+    idx = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert "https://s.shopee.com.br/abc" in idx and 'rel="sponsored noopener nofollow"' in idx
+    assert "Velho" not in idx and "javascript:" not in idx
+    assert "<b>pisca</b>" not in idx and "&lt;b&gt;" in idx
+    assert "R$ 19,90" in idx
+    priv = (tmp_path / "privacidade.html").read_text(encoding="utf-8")
+    assert "Privacy Policy" in priv and "Política de Privacidade" in priv
+    assert "Terms of Use" in (tmp_path / "termos.html").read_text(encoding="utf-8")
+    assert (tmp_path / ".nojekyll").exists()
