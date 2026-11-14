@@ -1,1 +1,108 @@
-{}
+{
+  "quando": "2026-11-14T22:35:18+00:00",
+  "fontes": {
+    "oficial": {
+      "ok": true,
+      "produtos": 100000,
+      "colunas": [
+        "shop_rating",
+        "itemid",
+        "sale_price",
+        "item_rating",
+        "global_category3",
+        "cb_option",
+        "discount_percentage",
+        "global_catid2",
+        "price",
+        "description",
+        "title",
+        "global_category1",
+        "image_link_3",
+        "global_catid1",
+        "global_catid3",
+        "like",
+        "condition",
+        "global_category2",
+        "model_ids",
+        "image_link",
+        "model_names",
+        "shop_name",
+        "product_link",
+        "product_short link"
+      ],
+      "erro": ""
+    },
+    "brasil": {
+      "ok": true,
+      "produtos": 10000,
+      "colunas": [
+        "image_link",
+        "itemid",
+        "price",
+        "global_category1",
+        "description",
+        "global_category2",
+        "global_item_attributes",
+        "item_rating",
+        "sale_price",
+        "global_catid2",
+        "discount_percentage",
+        "image_link_3",
+        "title",
+        "global_catid1",
+        "product_link",
+        "product_short link"
+      ],
+      "erro": ""
+    },
+    "openapi": {
+      "ok": false,
+      "produtos": 0,
+      "erro": "não configurada"
+    }
+  },
+  "candidatos": 110000,
+  "bloqueios": {
+    "preco_ou_estoque": 27006,
+    "categoria": 2247,
+    "armas": 455,
+    "bebe_seguranca": 114,
+    "saude": 466,
+    "replica": 216,
+    "fumo": 122,
+    "adulto": 59
+  },
+  "gerados": [
+    {
+      "id": "44520104567",
+      "quando": "2026-11-14T22:35:18+00:00",
+      "titulo": "Pisca Pisca LED 100 Luzes 10 Metros Fio Verde 8 Funções Quente e Frio para Festa e Decoração Natal",
+      "preco": 19.9,
+      "nicho": "fita led",
+      "gancho": "Casa de Natal gastando pouco",
+      "fonte": "oficial",
+      "oficial": true,
+      "arquivos": [
+        "20261114-2235-1-capa.png",
+        "20261114-2235-1.mp4"
+      ],
+      "publicado": false
+    },
+    {
+      "id": "23892759310",
+      "quando": "2026-11-14T22:35:18+00:00",
+      "titulo": "Caixinha De Som Para Computador Notebook Celular Usb P2",
+      "preco": 29.86,
+      "nicho": "caixa de som",
+      "gancho": "Caixinha que surpreende",
+      "fonte": "oficial",
+      "oficial": true,
+      "arquivos": [
+        "20261114-2235-2-capa.png",
+        "20261114-2235-2.mp4"
+      ],
+      "publicado": false
+    }
+  ],
+  "publicacao": "desligada (aguardando credenciais das contas comerciais)"
+}
