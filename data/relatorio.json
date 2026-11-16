@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-16T00:56:53+00:00",
+  "quando": "2026-11-16T06:15:29+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -68,26 +68,26 @@
     "replica": 207,
     "armas": 449,
     "bebe_seguranca": 103,
-    "repetido_14d": 2,
+    "repetido_14d": 3,
     "fumo": 141,
     "saude": 446,
     "adulto": 61
   },
   "gerados": [
     {
-      "id": "48217746927",
-      "quando": "2026-11-16T00:56:53+00:00",
-      "titulo": "Strobo Pisca Pisca Cordão Natal 300 Leds 30m Prova D'Água Bivolt 30 Flash Decoração Enfeite Natal LuvinCo",
-      "preco": 99.99,
+      "id": "22594550269",
+      "quando": "2026-11-16T06:15:29+00:00",
+      "titulo": "1 Par 60 cm Fita LED Flexível DRL para Farol Luz Diurna Sequencial Branco Âmbar Universal",
+      "preco": 25.89,
       "nicho": "fita led",
-      "gancho": "Essa luz mudou meu quarto",
+      "gancho": "Achei e é barato",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lr-mu2dkverxw5c10",
-      "preco_original": 699.9,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-81ztc-mk10ed7gwiyp35",
+      "preco_original": 80.0,
       "arquivos": [
-        "20261116-0056-1-capa.png",
-        "20261116-0056-1.mp4"
+        "20261116-0615-1-capa.png",
+        "20261116-0615-1.mp4"
       ],
       "publicado": false
     }
