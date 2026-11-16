@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-16T06:15:29+00:00",
+  "quando": "2026-11-16T23:42:57+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -68,26 +68,26 @@
     "replica": 207,
     "armas": 449,
     "bebe_seguranca": 103,
-    "repetido_14d": 3,
+    "repetido_14d": 4,
     "fumo": 141,
     "saude": 446,
     "adulto": 61
   },
   "gerados": [
     {
-      "id": "22594550269",
-      "quando": "2026-11-16T06:15:29+00:00",
-      "titulo": "1 Par 60 cm Fita LED Flexível DRL para Farol Luz Diurna Sequencial Branco Âmbar Universal",
-      "preco": 25.89,
-      "nicho": "fita led",
-      "gancho": "Achei e é barato",
+      "id": "23499445448",
+      "quando": "2026-11-16T23:42:57+00:00",
+      "titulo": "Coleira para Gato com Guizo Ajustável Estampada com Fecho de Encaixe para Uso Diário",
+      "preco": 7.99,
+      "nicho": "pet",
+      "gancho": "Testei pra você não errar",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-81ztc-mk10ed7gwiyp35",
-      "preco_original": 80.0,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lp-mpy4du8o7y0x00",
+      "preco_original": 39.99,
       "arquivos": [
-        "20261116-0615-1-capa.png",
-        "20261116-0615-1.mp4"
+        "20261116-2342-1-capa.png",
+        "20261116-2342-1.mp4"
       ],
       "publicado": false
     }
