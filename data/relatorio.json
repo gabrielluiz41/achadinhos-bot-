@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-15T20:18:56+00:00",
+  "quando": "2026-11-16T00:56:53+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -63,31 +63,31 @@
   },
   "candidatos": 110000,
   "bloqueios": {
-    "preco_ou_estoque": 26911,
-    "armas": 475,
-    "categoria": 2177,
-    "replica": 199,
-    "saude": 461,
-    "fumo": 130,
-    "bebe_seguranca": 114,
+    "preco_ou_estoque": 26814,
+    "categoria": 2202,
+    "replica": 207,
+    "armas": 449,
+    "bebe_seguranca": 103,
     "repetido_14d": 2,
-    "adulto": 54
+    "fumo": 141,
+    "saude": 446,
+    "adulto": 61
   },
   "gerados": [
     {
-      "id": "45058776004",
-      "quando": "2026-11-15T20:18:56+00:00",
-      "titulo": "Kit Lopazzi Válvula Preta + Sifão Preto para Cuba Pia Lavatório Banheiro Cozinha",
-      "preco": 29.9,
-      "nicho": "utilidades casa",
-      "gancho": "Comprei e amei",
+      "id": "48217746927",
+      "quando": "2026-11-16T00:56:53+00:00",
+      "titulo": "Strobo Pisca Pisca Cordão Natal 300 Leds 30m Prova D'Água Bivolt 30 Flash Decoração Enfeite Natal LuvinCo",
+      "preco": 99.99,
+      "nicho": "fita led",
+      "gancho": "Essa luz mudou meu quarto",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820l9-mn0gv9vumfwh1e",
-      "preco_original": 140.0,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lr-mu2dkverxw5c10",
+      "preco_original": 699.9,
       "arquivos": [
-        "20261115-2018-1-capa.png",
-        "20261115-2018-1.mp4"
+        "20261116-0056-1-capa.png",
+        "20261116-0056-1.mp4"
       ],
       "publicado": false
     }
