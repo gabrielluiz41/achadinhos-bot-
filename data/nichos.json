@@ -1,12 +1,18 @@
 {
   "_como_editar": "Garimpeiro: cada nicho tem nome, termos (palavras que aparecem no título/categoria do produto), peso (1 = normal, 2 = prioridade), ganchos (até 5 palavras) e hashtags.",
   "nichos": [
+    {"nome": "arvore de natal", "peso": 2.0, "termos": ["arvore de natal", "arvore natal", "pinheiro de natal"], "ganchos": ["Montei gastando quase nada", "Natal de revista, preço baixo"], "hashtags": ["#natal", "#decoracaonatalina"]},
+    {"nome": "enfeite natal", "peso": 2.0, "termos": ["enfeite de natal", "enfeite natal", "bola de natal", "vila de natal", "presepio", "guirlanda"], "ganchos": ["Disse que foi baratinho", "Natal montado com pouco"], "hashtags": ["#natal", "#decoracao"]},
     {"nome": "papel de presente", "peso": 2.0, "termos": ["papel de presente", "embalagem presente", "sacola presente", "laco presente", "caixa presente"], "ganchos": ["Embrulho de loja gastando pouco", "Presente bonito sem gastar"], "hashtags": ["#natal", "#presente"]},
     {"nome": "fita led", "peso": 2.0, "termos": ["fita led", "pisca pisca", "cordao led", "luz de natal", "luminaria led"], "ganchos": ["Casa de Natal gastando pouco", "Essa luz mudou meu quarto"], "hashtags": ["#decoracao", "#natal"]},
     {"nome": "caixa de som", "peso": 1.5, "termos": ["caixa de som", "caixinha de som", "speaker bluetooth"], "ganchos": ["Som alto, preço baixo", "Caixinha que surpreende"], "hashtags": ["#tecnologia"]},
     {"nome": "copo termico", "peso": 1.0, "termos": ["copo termico", "garrafa termica", "caneca termica", "tumbler"], "ganchos": ["Gelado o dia inteiro", "Amigo secreto resolvido"], "hashtags": ["#copotermico"]},
     {"nome": "fone bluetooth", "peso": 1.0, "termos": ["fone bluetooth", "fone de ouvido", "earbuds", "headset"], "ganchos": ["Fone bom e barato", "Amigo secreto resolvido"], "hashtags": ["#tecnologia"]},
     {"nome": "organizador geladeira", "peso": 1.0, "termos": ["organizador geladeira", "organizador de geladeira", "pote organizador", "porta ovos"], "ganchos": ["Geladeira de novela", "Organização que dá gosto"], "hashtags": ["#organizacao", "#casa"]},
+    {"nome": "climatizador", "peso": 1.5, "termos": ["climatizador", "mini ventilador", "ventilador portatil", "umidificador"], "ganchos": ["Sobrevivendo ao calor barato", "Vento gelado por pouco"], "hashtags": ["#verao", "#calor"]},
+    {"nome": "panela", "peso": 1.5, "termos": ["panela", "frigideira", "air fryer", "forma de silicone"], "ganchos": ["A panela que viralizou", "Cozinha nova gastando pouco"], "hashtags": ["#cozinha"]},
+    {"nome": "viagem", "peso": 1.5, "termos": ["organizador de mala", "necessaire", "mala de viagem", "travesseiro de pescoco", "organizador viagem"], "ganchos": ["Coisas inúteis que eu amo", "Mala de férias organizada"], "hashtags": ["#viagem", "#ferias"]},
+    {"nome": "pet", "peso": 1.5, "termos": ["cachorro", "gato", "comedouro", "arranhador", "caminha pet", "caminha cachorro"], "ganchos": ["Meu pet aprovou isso", "Testei no meu cachorro"], "hashtags": ["#pet"]},
     {"nome": "utilidades casa", "peso": 1.0, "termos": ["organizador", "suporte", "cozinha", "mop", "escorredor", "dispenser"], "ganchos": ["Todo mundo precisa disso", "Por que ninguém me contou"], "hashtags": ["#casa", "#utilidades"]}
   ]
 }
