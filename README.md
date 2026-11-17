@@ -9,7 +9,8 @@ Até lá cada rodada sai como artefato do Actions (aba Actions > rodada > Artifa
 ## Como funciona
 1. `bot/fontes.py` baixa os feeds pelos secrets `SHOPEE_FEED_URL_OFICIAL` (prioridade, lojas oficiais)
    e `SHOPEE_FEED_URL_BRASIL`. Os valores dos secrets nunca são impressos nem gravados.
-   A Open API da Shopee entra depois como mais uma fonte com o mesmo `produtos()`.
+   2ª fonte: Open API do afiliado (GraphQL `productOfferV2`), liga sozinha quando existirem os secrets
+   `SHOPEE_APP_ID` e `SHOPEE_SECRET`; busca pelo 1º termo de cada nicho. A API traz só 1 imagem (sem galeria/vídeo).
 2. `bot/filtro.py` barra saúde/remédio/suplemento/emagrecedor, armas/facas, adulto, réplica,
    vape/cigarro e cadeirinha/bebê conforto.
 3. `bot/selecao.py` cruza com `data/nichos.json`, pontua (loja oficial, desconto, vendas, nota, preço)
