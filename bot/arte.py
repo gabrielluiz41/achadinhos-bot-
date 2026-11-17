@@ -72,6 +72,22 @@ def _ajusta(draw, texto, peso, largura_max, max_linhas, tam_ini, tam_min):
     return f, _quebra(draw, texto, f, largura_max, max_linhas)
 
 
+DESCONTO_MAX_CONFIAVEL = 70  # acima disso o preço "de" parece inflado: não mostrar
+LADO_MIN_FOTO = 500  # foto menor que isso não entra em vídeo nem na vitrine
+
+
+def mostrar_preco_de(preco: float, preco_original: float | None) -> bool:
+    """Mostra o preço "de" só quando existe e o desconto é crível (<= 70%)."""
+    po = float(preco_original or 0)
+    if po <= preco * 1.05:
+        return False
+    return (1 - preco / po) * 100 <= DESCONTO_MAX_CONFIAVEL
+
+
+def foto_boa(img: Image.Image | None, lado_min: int = LADO_MIN_FOTO) -> bool:
+    return img is not None and min(img.size) >= lado_min
+
+
 def baixar_imagem(url: str, timeout: int = 30) -> Image.Image | None:
     if not url:
         return None
@@ -169,7 +185,7 @@ def gerar_capa(produto: dict, gancho: str, imagem: Image.Image | None, destino: 
 
     # Etiqueta de preço sobre o canto inferior direito do produto
     antes = None
-    if produto.get("preco_original", 0) > produto["preco"] * 1.05:
+    if mostrar_preco_de(produto["preco"], produto.get("preco_original")):
         antes = preco_br(produto["preco_original"])
     tag = _etiqueta(preco_br(produto["preco"]), antes)
     capa.paste(tag, (W - tag.width - 40, area[3] - tag.height + 70), tag)

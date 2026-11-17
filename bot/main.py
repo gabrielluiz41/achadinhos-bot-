@@ -63,7 +63,8 @@ def legenda(gancho: str, p: dict, nicho: dict | None) -> str:
     tags = ["#achadinhos", "#achadinhosshopee", "#achadosbaratos", "#comprinhas"]
     tags += [t for t in (nicho or {}).get("hashtags", []) if t not in tags]
     preco = arte.preco_br(p["preco"])
-    antes = f" (era {arte.preco_br(p['preco_original'])})" if p.get("preco_original", 0) > p["preco"] * 1.05 else ""
+    antes = (f" (era {arte.preco_br(p['preco_original'])})"
+             if arte.mostrar_preco_de(p["preco"], p.get("preco_original")) else "")
     return (f"{gancho} 👀\n{titulo_curto(p['titulo'], 10)} por {preco}{antes}.\n"
             f"{arte.FALA_FINAL}\n\nLink de afiliado: posso ganhar comissão sem custo extra para você.\n"
             f"Preço e estoque podem mudar.\n\n{' '.join(tags[:8])}")
@@ -99,7 +100,19 @@ def main(argv=None) -> int:
         print(f"fonte {fonte.nome}: {len(lista)} produtos; colunas={fonte.colunas[:60]}"
               + (f"; erro={fonte.erro}" if fonte.erro else ""))
 
-    escolhidos, bloqueios = escolher(produtos, nichos, historico, args.quantidade, agora)
+    # Pega reservas: quem não tiver foto boa (baixa e tem >= 500 px) cede a vaga ao próximo.
+    reservas, bloqueios = escolher(produtos, nichos, historico, args.quantidade * 8, agora)
+    escolhidos, imagens = [], {}
+    for p, nicho in reservas:
+        if len(escolhidos) == args.quantidade:
+            break
+        if not args.sem_imagem:
+            img = arte.baixar_imagem(p.imagem)
+            if not arte.foto_boa(img):
+                bloqueios["sem_foto_boa"] = bloqueios.get("sem_foto_boa", 0) + 1
+                continue
+            imagens[p.id] = img
+        escolhidos.append((p, nicho))
     print(f"candidatos={len(produtos)} bloqueios={bloqueios} escolhidos={len(escolhidos)}")
 
     rnd = random.Random()
@@ -111,7 +124,7 @@ def main(argv=None) -> int:
         gancho = escolher_gancho(nicho, ganchos, usados, rnd)
         usados.add(gancho)
         base = os.path.join(args.saida, f"{carimbo}-{i}")
-        img = None if args.sem_imagem else arte.baixar_imagem(p.imagem)
+        img = imagens.get(p.id)
         capa = arte.gerar_capa(pd, gancho, img, base + "-capa.png")
         final = arte.gerar_final(base + "-final.png")
         mp4 = None

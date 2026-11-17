@@ -115,3 +115,58 @@ def test_vitrine_e_politicas(tmp_path):
     assert "Privacy Policy" in priv and "Política de Privacidade" in priv
     assert "Terms of Use" in (tmp_path / "termos.html").read_text(encoding="utf-8")
     assert (tmp_path / ".nojekyll").exists()
+
+
+def test_qualidade_outlet_defeito_e_desconto_suspeito():
+    assert motivo_bloqueio("Outlet Necessaire Gocase Makeup Pequenos Defeitos") == "qualidade"
+    assert motivo_bloqueio("Panela com avaria na embalagem") == "qualidade"
+    assert motivo_bloqueio("Luminária de mostruário") == "qualidade"
+    assert motivo_bloqueio("Vestido com detalhes dourados") is None
+    from bot.fontes import Produto
+    agora = datetime(2026, 11, 20, tzinfo=timezone.utc)
+    inflado = Produto(id="1-1", titulo="Strobo Pisca Pisca 300 Leds", preco=99.99, preco_original=699.9,
+                      link="https://s.shopee.com.br/a", imagem="https://x/1.jpg")
+    normal = Produto(id="1-2", titulo="Pisca Pisca 100 Leds", preco=19.9, preco_original=39.9,
+                     link="https://s.shopee.com.br/b", imagem="https://x/2.jpg")
+    esc, bloq = escolher([inflado, normal], [], [], 2, agora, seed=1)
+    assert [p.id for p, _ in esc] == ["1-2"] and bloq["desconto_suspeito"] == 1
+
+
+def test_preco_de_e_foto_boa():
+    assert arte.mostrar_preco_de(19.9, 39.9) is True
+    assert arte.mostrar_preco_de(99.99, 699.9) is False   # 86%: parece inflado
+    assert arte.mostrar_preco_de(19.9, 0) is False
+    assert arte.foto_boa(Image.new("RGB", (800, 600))) is True
+    assert arte.foto_boa(Image.new("RGB", (800, 400))) is False
+    assert arte.foto_boa(None) is False
+
+
+def test_portao_de_foto_troca_produto(tmp_path, monkeypatch):
+    monkeypatch.setenv("TTS", "0")
+    from bot import main as m
+    chamadas = []
+
+    def falsa(url, timeout=30):
+        chamadas.append(url)
+        return Image.new("RGBA", (300, 300)) if len(chamadas) == 1 else Image.new("RGBA", (900, 900))
+    monkeypatch.setattr(m.arte, "baixar_imagem", falsa)
+    rc = m.main(["--csv", CSV, "--quantidade", "1", "--saida", str(tmp_path), "--sem-video", "--nao-gravar"])
+    assert rc == 0 and len(chamadas) == 2
+    rel = json.load(open(tmp_path / "relatorio.json", encoding="utf-8"))
+    assert rel["bloqueios"]["sem_foto_boa"] == 1 and len(rel["gerados"]) == 1
+
+
+def test_vitrine_sem_foto_e_sem_preco_inflado(tmp_path):
+    from bot import vitrine
+    agora = datetime(2026, 11, 15, 12, tzinfo=timezone.utc)
+    hist = [
+        {"id": "3", "quando": agora.isoformat(), "titulo": "Outlet Necessaire Pequenos Defeitos", "preco": 9.9,
+         "link": "https://s.shopee.com.br/c", "imagem": "https://cf.shopee/c.jpg"},
+        {"id": "1", "quando": agora.isoformat(), "titulo": "Sem foto", "preco": 19.9,
+         "link": "https://s.shopee.com.br/a"},
+        {"id": "2", "quando": agora.isoformat(), "titulo": "Strobo", "preco": 99.99, "preco_original": 699.9,
+         "link": "https://s.shopee.com.br/b", "imagem": "https://cf.shopee/b.jpg"},
+    ]
+    vitrine.gerar_site(hist, str(tmp_path), agora)
+    idx = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert "Sem foto" not in idx and "Strobo" in idx and "R$ 699,90" not in idx and "Outlet" not in idx

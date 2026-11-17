@@ -1,9 +1,35 @@
 {
   "_como_editar": "Garimpeiro: ganchos com até 5 palavras. 'sazonais' usa a faixa MM-DD_MM-DD (UTC) e entra na frente dos gerais.",
-  "gerais": ["Achei e é barato", "Não acredito nesse preço", "Por que ninguém me contou", "Todo mundo precisa disso", "Comprei e amei", "Barato e muito útil", "Coisas inúteis que eu amo", "Adivinha quanto custou isso", "Expectativa zero, chegou isso", "Testei pra você não errar", "Disse que foi baratinho"],
+  "gerais": [
+    "Achei e é barato",
+    "Não acredito nesse preço",
+    "Por que ninguém me contou",
+    "Todo mundo precisa disso",
+    "Comprei e amei",
+    "Barato e muito útil",
+    "Coisas inúteis que eu amo",
+    "Adivinha quanto custou isso",
+    "Expectativa zero, chegou isso",
+    "Testei pra você não errar",
+    "Disse que foi baratinho",
+    "POV: não consigo parar",
+    "Top 3 abaixo de 20",
+    "Antes e depois em segundos",
+    "Quanto você pagaria nisso?"
+  ],
   "sazonais": {
-    "11-17_11-30": ["Black Friday de verdade", "Preço de Black Friday", "Corre antes de acabar"],
-    "11-20_12-24": ["Amigo secreto resolvido", "Presente bom e barato"],
-    "11-25_12-20": ["Gasta o 13º direito"]
+    "11-17_11-30": [
+      "Black Friday de verdade",
+      "Preço de Black Friday",
+      "Corre antes de acabar",
+      "Salva pra Black Friday"
+    ],
+    "11-20_12-24": [
+      "Amigo secreto resolvido",
+      "Presente bom e barato"
+    ],
+    "11-25_12-20": [
+      "Gasta o 13º direito"
+    ]
   }
 }

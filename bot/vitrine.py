@@ -10,7 +10,8 @@ import html
 import os
 from datetime import datetime, timedelta, timezone
 
-from .arte import preco_br
+from .arte import mostrar_preco_de, preco_br
+from .filtro import motivo_bloqueio
 
 PERFIL = "@acheiebarato.oficial"
 NOME = "Achei e Barato"
@@ -82,7 +83,8 @@ def itens_vitrine(historico: list[dict], agora: datetime) -> list[dict]:
             quando = datetime.fromisoformat(h["quando"])
         except (KeyError, ValueError):
             continue
-        if quando < limite or h.get("id") in vistos or not _seguro(h.get("link", "")):
+        if (quando < limite or h.get("id") in vistos or not _seguro(h.get("link", ""))
+                or not _seguro(h.get("imagem", "")) or motivo_bloqueio(h.get("titulo", ""))):
             continue
         vistos.add(h.get("id"))
         saida.append(h)
@@ -98,7 +100,7 @@ def _card(h: dict) -> str:
             if img else '<div class="sem"></div>')
     antes = ""
     po = float(h.get("preco_original") or 0)
-    if po > float(h["preco"]) * 1.05:
+    if mostrar_preco_de(float(h["preco"]), po):
         antes = f'<span class="a">{preco_br(po)}</span>'
     return (f'<a class="card" href="{link}" target="_blank" rel="sponsored noopener nofollow">{foto}'
             f'<div class="info"><span class="t">{html.escape(h.get("titulo", ""))}</span>{antes}'

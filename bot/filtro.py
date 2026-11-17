@@ -1,5 +1,6 @@
 """Categorias proibidas: saúde/remédio/suplemento/emagrecedor, armas/facas, adulto,
-réplica de marca, vape/cigarro, cadeirinha/bebê conforto.
+réplica de marca, vape/cigarro, cadeirinha/bebê conforto; e produto com defeito/outlet
+(pedido do Garimpeiro 17/11).
 
 Cada termo casa como palavra inteira (aceita plural com s/es). Termo terminado em "*"
 casa como começo de palavra (ex.: "emagrec*" pega emagrecer, emagrecedor).
@@ -26,6 +27,8 @@ PROIBIDOS = {
                 "tipo original", "master copy", "espelhado", "aaa"],
     "fumo": ["vape", "pod descartavel", "cigarro", "cigarro eletronico", "narguile", "essencia para narguile",
              "tabaco", "seda", "dichavador", "piteira", "juul", "ignite", "pod"],
+    "qualidade": ["outlet", "defeito*", "defeituos*", "avaria*", "mostruario", "pequenos defeitos",
+                  "segunda linha", "2a linha"],
     "bebe_seguranca": ["cadeirinha", "bebe conforto", "assento infantil", "booster", "cadeira para auto",
                        "cadeira auto", "assento de elevacao"],
 }
