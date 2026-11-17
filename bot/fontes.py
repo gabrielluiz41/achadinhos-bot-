@@ -204,7 +204,7 @@ class FonteOpenAPIShopee:
     nome = "openapi"
     URL = "https://open-api.affiliate.shopee.com.br/graphql"
     CAMPOS = ("itemId shopId productName priceMin priceMax priceDiscountRate imageUrl productLink "
-              "offerLink shopName shopType sales ratingStar commissionRate productCatId")
+              "offerLink shopName shopType sales ratingStar commissionRate productCatIds")
     TIPO_LOJA_OFICIAL = 1  # shopType: 1 = loja oficial (Shopee Mall)
 
     def __init__(self, palavras: list[str] | None = None, por_palavra: int = 50, max_palavras: int = 20):
@@ -277,7 +277,7 @@ class FonteOpenAPIShopee:
             titulo=str(n.get("productName") or ""),
             preco=preco, link=link, imagem=str(n.get("imageUrl") or ""),
             preco_original=original, desconto=desconto,
-            categoria=str(n.get("productCatId") or ""), loja=str(n.get("shopName") or ""),
+            categoria=str(n.get("productCatIds") or ""), loja=str(n.get("shopName") or ""),
             oficial=cls.TIPO_LOJA_OFICIAL in (n.get("shopType") or []),
             vendas=int(_num(n.get("sales"))), nota=_num(n.get("ratingStar")),
             fonte="openapi", extras={"comissao": n.get("commissionRate")},
