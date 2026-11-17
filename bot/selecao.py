@@ -11,6 +11,7 @@ from .filtro import motivo_bloqueio
 from .fontes import Produto
 
 DIAS_SEM_REPETIR = 14
+DESCONTO_MAX = 70  # desconto acima disso = preço "de" inflado (Garimpeiro/Diretor 16-17/11)
 
 
 def _norm(s: str) -> str:
@@ -77,6 +78,10 @@ def escolher(produtos: list[Produto], nichos: list[dict], historico: list[dict],
         if motivo:
             chave = motivo.split(":")[0]
             bloqueios[chave] = bloqueios.get(chave, 0) + 1
+            continue
+        if p.desconto > DESCONTO_MAX or (p.preco_original and p.preco_original > p.preco
+                                         and (1 - p.preco / p.preco_original) * 100 > DESCONTO_MAX):
+            bloqueios["desconto_suspeito"] = bloqueios.get("desconto_suspeito", 0) + 1
             continue
         if p.preco > preco_max or p.estoque == 0:
             bloqueios["preco_ou_estoque"] = bloqueios.get("preco_ou_estoque", 0) + 1
