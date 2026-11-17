@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-17T07:47:45+00:00",
+  "quando": "2026-11-17T15:34:26+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -58,12 +58,30 @@
     "openapi": {
       "ok": false,
       "produtos": 0,
-      "erro": "não configurada"
+      "colunas": [
+        "itemId",
+        "shopId",
+        "productName",
+        "priceMin",
+        "priceMax",
+        "priceDiscountRate",
+        "imageUrl",
+        "productLink",
+        "offerLink",
+        "shopName",
+        "shopType",
+        "sales",
+        "ratingStar",
+        "commissionRate",
+        "productCatId"
+      ],
+      "erro": "arvore de natal: 10010 Cannot query field \"productCatId\" on type \"ProductOfferV2\". Did you mean \"productCatIds\", \"productName\", or \"productLink; enfeite de natal: 10010 Cannot query field \"productCatId\" on type \"ProductOfferV2\". Did you mean \"productCatIds\", \"productName\", or \"productLink; papel de presente: 10010 Cannot query field \"productCatId\" on type \"ProductOfferV2\". Did you mean \"productCatIds\", \"productName\", or \"productLink"
     }
   },
   "candidatos": 110000,
   "bloqueios": {
-    "preco_ou_estoque": 26740,
+    "preco_ou_estoque": 26668,
+    "desconto_suspeito": 805,
     "categoria": 2193,
     "replica": 261,
     "saude": 471,
@@ -71,23 +89,25 @@
     "fumo": 122,
     "adulto": 44,
     "bebe_seguranca": 104,
-    "repetido_14d": 2
+    "qualidade": 60,
+    "repetido_14d": 3,
+    "sem_foto_boa": 1
   },
   "gerados": [
     {
-      "id": "43669081037",
-      "quando": "2026-11-17T07:47:45+00:00",
-      "titulo": "Outlet Necessaire Gocase Makeup Double Poeira das Estrelas - Pequenos defeitos",
-      "preco": 19.9,
-      "nicho": "viagem",
-      "gancho": "Black Friday de verdade",
+      "id": "23493549662",
+      "quando": "2026-11-17T15:34:26+00:00",
+      "titulo": "Caderno Colegial 10 Matérias 160 Folhas Cute Cat - CADERSIL Capa:Xicara",
+      "preco": 29.96,
+      "nicho": "caneca",
+      "gancho": "Preço de Black Friday",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/sg-11134201-824i9-meoiazamwem879",
-      "preco_original": 269.99,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-825ak-mttjqrvdf6km72",
+      "preco_original": 70.0,
       "arquivos": [
-        "20261117-0747-1-capa.png",
-        "20261117-0747-1.mp4"
+        "20261117-1534-1-capa.png",
+        "20261117-1534-1.mp4"
       ],
       "publicado": false
     }
