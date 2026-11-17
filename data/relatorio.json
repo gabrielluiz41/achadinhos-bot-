@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-17T15:39:56+00:00",
+  "quando": "2026-11-17T22:58:05+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 650,
+      "produtos": 622,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; caneca: 10000 error [10000]: System Error"
+      "erro": "climatizador: 10000 error [10000]: System Error; panela: 10000 error [10000]: System Error; mini processador: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110650,
+  "candidatos": 110622,
   "bloqueios": {
-    "preco_ou_estoque": 26686,
-    "desconto_suspeito": 883,
+    "preco_ou_estoque": 26676,
+    "desconto_suspeito": 879,
     "categoria": 2193,
-    "replica": 262,
+    "replica": 263,
     "saude": 475,
-    "armas": 421,
-    "fumo": 122,
+    "armas": 420,
+    "fumo": 130,
     "adulto": 44,
     "bebe_seguranca": 104,
-    "qualidade": 60,
+    "qualidade": 61,
     "repetido_14d": 4
   },
   "gerados": [
     {
-      "id": "418205294-22696241891",
-      "quando": "2026-11-17T15:39:56+00:00",
-      "titulo": "ANA1108 Conjunto com 13 unidades Pincéis De Maquiagem Contorno Kabuki Profissional",
-      "preco": 11.98,
-      "nicho": "maquiagem",
-      "gancho": "Corre antes de acabar",
+      "id": "908280603-23793592187",
+      "quando": "2026-11-17T22:58:05+00:00",
+      "titulo": "Sanitário Higiênico Canino Pet Educador Xixi Sim Tapete Higiênico Cachorro Grande Banheiro",
+      "preco": 16.02,
+      "nicho": "pet",
+      "gancho": "Salva pra Black Friday",
       "fonte": "openapi",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lk-mmvxxzgnjh1g4c",
-      "preco_original": 33.28,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjqymtyu5p1ia4",
+      "preco_original": 39.07,
       "arquivos": [
-        "20261117-1539-1-capa.png",
-        "20261117-1539-1.mp4"
+        "20261117-2258-1-capa.png",
+        "20261117-2258-1.mp4"
       ],
       "publicado": false
     }
