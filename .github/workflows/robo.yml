@@ -41,6 +41,8 @@ jobs:
         env:
           SHOPEE_FEED_URL_OFICIAL: ${{ secrets.SHOPEE_FEED_URL_OFICIAL }}
           SHOPEE_FEED_URL_BRASIL: ${{ secrets.SHOPEE_FEED_URL_BRASIL }}
+          SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+          SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
           POSTS_POR_RODADA: ${{ github.event.inputs.quantidade || '1' }}
           # Publicação DESLIGADA até o Gabriel cadastrar as credenciais das contas comerciais.
           PUBLICAR: "0"

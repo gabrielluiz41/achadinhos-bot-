@@ -170,3 +170,40 @@ def test_vitrine_sem_foto_e_sem_preco_inflado(tmp_path):
     vitrine.gerar_site(hist, str(tmp_path), agora)
     idx = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert "Sem foto" not in idx and "Strobo" in idx and "R$ 699,90" not in idx and "Outlet" not in idx
+
+
+def test_openapi_mesma_interface_sem_vazar_segredo(monkeypatch):
+    from bot.fontes import FonteOpenAPIShopee
+    monkeypatch.delenv("SHOPEE_APP_ID", raising=False)
+    monkeypatch.delenv("SHOPEE_SECRET", raising=False)
+    monkeypatch.delenv("SHOPEE_APP_SECRET", raising=False)
+    f = FonteOpenAPIShopee(palavras=["pisca pisca"])
+    assert not f.disponivel() and f.produtos() == []
+    monkeypatch.setenv("SHOPEE_APP_ID", "123")
+    monkeypatch.setenv("SHOPEE_SECRET", "segredo-xyz")
+    enviados = []
+
+    class Resp:
+        status_code = 200
+        def raise_for_status(self): pass
+        def json(self):
+            return {"data": {"productOfferV2": {"nodes": [
+                {"itemId": 11, "shopId": 22, "productName": "Pisca Pisca 100 LEDs", "priceMin": "19.90",
+                 "priceDiscountRate": 50, "imageUrl": "https://cf.shopee.com.br/file/a", "offerLink": "https://s.shopee.com.br/x",
+                 "shopName": "Loja", "shopType": [1], "sales": 1200, "ratingStar": "4.8", "commissionRate": "0.08"},
+                {"itemId": 11, "shopId": 22, "productName": "duplicado", "priceMin": "19.90", "offerLink": "https://s/x"},
+                {"itemId": 12, "productName": "sem preço", "offerLink": "https://s/y"}]}}}
+
+    class Sessao:
+        def post(self, url, data, headers, timeout):
+            enviados.append((url, data, headers))
+            return Resp()
+    ps = f.produtos(sessao=Sessao())
+    assert [p.id for p in ps] == ["22-11"]
+    p = ps[0]
+    assert p.preco == 19.9 and p.preco_original == 39.8 and p.oficial and p.vendas == 1200 and p.fonte == "openapi"
+    url, data, cab = enviados[0]
+    assert url.startswith("https://open-api.affiliate.shopee.com.br")
+    ts = int(cab["Authorization"].split("Timestamp=")[1].split(",")[0])
+    assert cab["Authorization"].endswith(FonteOpenAPIShopee.assinatura("123", "segredo-xyz", ts, data.decode()))
+    assert "segredo-xyz" not in cab["Authorization"] and "segredo-xyz" not in data.decode()

@@ -2,7 +2,7 @@
 
 Hoje: feed do afiliado Shopee (CSV exportado do painel), lido pelas URLs dos secrets
 SHOPEE_FEED_URL_OFICIAL (prioridade) e SHOPEE_FEED_URL_BRASIL.
-Depois: Open API da Shopee entra como outra classe com o mesmo método `produtos()`.
+Open API da Shopee (FonteOpenAPIShopee) entra como 2ª fonte quando os secrets existirem.
 
 Nunca imprimir, registrar ou gravar o valor das URLs dos secrets.
 """
@@ -193,18 +193,120 @@ class FonteFeedShopee:
 
 
 class FonteOpenAPIShopee:
-    """Reservado: Open API do afiliado (ainda não liberada no painel). Mesma interface."""
+    """Open API do afiliado Shopee (GraphQL, consulta productOfferV2). Mesma interface do feed.
+
+    Secrets: SHOPEE_APP_ID e SHOPEE_SECRET (aceita também SHOPEE_APP_SECRET). Nunca são impressos.
+    Assinatura: Authorization: SHA256 Credential=<AppId>, Timestamp=<ts>, Signature=sha256(AppId+ts+payload+Secret).
+    Busca por palavra-chave: o primeiro termo de cada nicho do Garimpeiro (data/nichos.json),
+    ordenado por mais vendidos. A API só traz uma imagem (imageUrl): galeria e vídeo não vêm.
+    """
 
     nome = "openapi"
-    colunas: list[str] = []
-    erro = ""
+    URL = "https://open-api.affiliate.shopee.com.br/graphql"
+    CAMPOS = ("itemId shopId productName priceMin priceMax priceDiscountRate imageUrl productLink "
+              "offerLink shopName shopType sales ratingStar commissionRate productCatId")
+    TIPO_LOJA_OFICIAL = 1  # shopType: 1 = loja oficial (Shopee Mall)
+
+    def __init__(self, palavras: list[str] | None = None, por_palavra: int = 50, max_palavras: int = 20):
+        self.palavras = palavras
+        self.por_palavra = por_palavra
+        self.max_palavras = max_palavras
+        self.colunas: list[str] = []
+        self.erro = ""
+
+    @staticmethod
+    def _credenciais() -> tuple[str, str]:
+        app = os.getenv("SHOPEE_APP_ID", "").strip()
+        seg = (os.getenv("SHOPEE_SECRET") or os.getenv("SHOPEE_APP_SECRET") or "").strip()
+        return app, seg
 
     def disponivel(self) -> bool:
-        return bool(os.getenv("SHOPEE_APP_ID") and os.getenv("SHOPEE_APP_SECRET"))
+        return all(self._credenciais())
 
-    def produtos(self) -> list[Produto]:
-        self.erro = "Open API ainda não implementada"
-        return []
+    @staticmethod
+    def assinatura(app_id: str, segredo: str, ts: int, payload: str) -> str:
+        import hashlib
+        return hashlib.sha256(f"{app_id}{ts}{payload}{segredo}".encode()).hexdigest()
+
+    def _palavras(self) -> list[str]:
+        if self.palavras is not None:
+            return self.palavras[: self.max_palavras]
+        caminho = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "nichos.json")
+        try:
+            import json
+            with open(caminho, encoding="utf-8") as f:
+                nichos = json.load(f).get("nichos", [])
+        except (OSError, ValueError):
+            return []
+        nichos.sort(key=lambda n: -float(n.get("peso", 1)))
+        return [n["termos"][0] for n in nichos if n.get("termos")][: self.max_palavras]
+
+    def _consulta(self, palavra: str, sessao) -> list[dict]:
+        import json
+        import time
+        q = ("query($kw:String,$lim:Int){productOfferV2(keyword:$kw,sortType:2,page:1,limit:$lim)"
+             "{nodes{" + self.CAMPOS + "} pageInfo{hasNextPage}}}")
+        payload = json.dumps({"query": q, "variables": {"kw": palavra, "lim": self.por_palavra}},
+                             separators=(",", ":"), ensure_ascii=False)
+        app, seg = self._credenciais()
+        ts = int(time.time())
+        cab = {"Content-Type": "application/json",
+               "Authorization": f"SHA256 Credential={app}, Timestamp={ts}, "
+                                f"Signature={self.assinatura(app, seg, ts, payload)}"}
+        r = sessao.post(self.URL, data=payload.encode("utf-8"), headers=cab, timeout=60)
+        r.raise_for_status()
+        corpo = r.json()
+        if corpo.get("errors"):
+            e = corpo["errors"][0]
+            raise RuntimeError(f"{(e.get('extensions') or {}).get('code', '')} {str(e.get('message', ''))[:120]}")
+        return ((corpo.get("data") or {}).get("productOfferV2") or {}).get("nodes") or []
+
+    @classmethod
+    def para_produto(cls, n: dict) -> Produto | None:
+        try:
+            preco = float(n.get("priceMin") or 0)
+        except (TypeError, ValueError):
+            return None
+        link = n.get("offerLink") or n.get("productLink") or ""
+        if not preco or not link or not n.get("itemId"):
+            return None
+        desconto = float(n.get("priceDiscountRate") or 0)
+        original = round(preco / (1 - desconto / 100), 2) if 0 < desconto < 100 else 0.0
+        return Produto(
+            id=f"{n.get('shopId', '')}-{n['itemId']}",
+            titulo=str(n.get("productName") or ""),
+            preco=preco, link=link, imagem=str(n.get("imageUrl") or ""),
+            preco_original=original, desconto=desconto,
+            categoria=str(n.get("productCatId") or ""), loja=str(n.get("shopName") or ""),
+            oficial=cls.TIPO_LOJA_OFICIAL in (n.get("shopType") or []),
+            vendas=int(_num(n.get("sales"))), nota=_num(n.get("ratingStar")),
+            fonte="openapi", extras={"comissao": n.get("commissionRate")},
+        )
+
+    def produtos(self, sessao=None) -> list[Produto]:
+        if not self.disponivel():
+            self.erro = "secrets SHOPEE_APP_ID/SHOPEE_SECRET ausentes"
+            return []
+        sessao = sessao or requests.Session()
+        saida, vistos, erros = [], set(), []
+        for palavra in self._palavras():
+            try:
+                nodes = self._consulta(palavra, sessao)
+            except requests.RequestException as e:
+                status = getattr(getattr(e, "response", None), "status_code", "")
+                erros.append(f"{palavra}: {type(e).__name__} {status}".strip())
+                continue
+            except (RuntimeError, ValueError) as e:
+                erros.append(f"{palavra}: {e}")
+                continue
+            for n in nodes:
+                p = self.para_produto(n)
+                if p and p.id not in vistos:
+                    vistos.add(p.id)
+                    saida.append(p)
+        self.colunas = self.CAMPOS.split()
+        self.erro = "; ".join(erros[:3])
+        return saida
 
 
 class FonteArquivo:
