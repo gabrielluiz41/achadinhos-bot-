@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-16T23:42:57+00:00",
+  "quando": "2026-11-17T03:42:39+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -63,31 +63,31 @@
   },
   "candidatos": 110000,
   "bloqueios": {
-    "preco_ou_estoque": 26814,
-    "categoria": 2202,
-    "replica": 207,
-    "armas": 449,
-    "bebe_seguranca": 103,
-    "repetido_14d": 4,
-    "fumo": 141,
-    "saude": 446,
-    "adulto": 61
+    "preco_ou_estoque": 26740,
+    "categoria": 2193,
+    "replica": 261,
+    "saude": 471,
+    "armas": 420,
+    "fumo": 122,
+    "adulto": 44,
+    "bebe_seguranca": 104,
+    "repetido_14d": 1
   },
   "gerados": [
     {
-      "id": "23499445448",
-      "quando": "2026-11-16T23:42:57+00:00",
-      "titulo": "Coleira para Gato com Guizo Ajustável Estampada com Fecho de Encaixe para Uso Diário",
-      "preco": 7.99,
-      "nicho": "pet",
-      "gancho": "Testei pra você não errar",
+      "id": "58222392756",
+      "quando": "2026-11-17T03:42:39+00:00",
+      "titulo": "Decoração de Natal Ramo de Eucalipto Artificial, Folhagem Verde para Arranjo, Guirlanda, Mesa, Festa, Barato e Bonito",
+      "preco": 10.99,
+      "nicho": "enfeite natal",
+      "gancho": "Coisas inúteis que eu amo",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lp-mpy4du8o7y0x00",
-      "preco_original": 39.99,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-8258y-mv75uofopqtje1",
+      "preco_original": 39.56,
       "arquivos": [
-        "20261116-2342-1-capa.png",
-        "20261116-2342-1.mp4"
+        "20261117-0342-1-capa.png",
+        "20261117-0342-1.mp4"
       ],
       "publicado": false
     }
