@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-17T03:42:39+00:00",
+  "quando": "2026-11-17T07:47:45+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -71,23 +71,23 @@
     "fumo": 122,
     "adulto": 44,
     "bebe_seguranca": 104,
-    "repetido_14d": 1
+    "repetido_14d": 2
   },
   "gerados": [
     {
-      "id": "58222392756",
-      "quando": "2026-11-17T03:42:39+00:00",
-      "titulo": "Decoração de Natal Ramo de Eucalipto Artificial, Folhagem Verde para Arranjo, Guirlanda, Mesa, Festa, Barato e Bonito",
-      "preco": 10.99,
-      "nicho": "enfeite natal",
-      "gancho": "Coisas inúteis que eu amo",
+      "id": "43669081037",
+      "quando": "2026-11-17T07:47:45+00:00",
+      "titulo": "Outlet Necessaire Gocase Makeup Double Poeira das Estrelas - Pequenos defeitos",
+      "preco": 19.9,
+      "nicho": "viagem",
+      "gancho": "Black Friday de verdade",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/sg-11134201-8258y-mv75uofopqtje1",
-      "preco_original": 39.56,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-824i9-meoiazamwem879",
+      "preco_original": 269.99,
       "arquivos": [
-        "20261117-0342-1-capa.png",
-        "20261117-0342-1.mp4"
+        "20261117-0747-1-capa.png",
+        "20261117-0747-1.mp4"
       ],
       "publicado": false
     }
