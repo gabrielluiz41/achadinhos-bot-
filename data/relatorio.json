@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-18T07:15:36+00:00",
+  "quando": "2026-11-18T22:33:55+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 864,
+      "produtos": 490,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "panela: 10000 error [10000]: System Error"
+      "erro": "arvore de natal: 10000 error [10000]: System Error; enfeite de natal: 10000 error [10000]: System Error; toalha de mesa natal: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110864,
+  "candidatos": 110490,
   "bloqueios": {
-    "preco_ou_estoque": 27031,
+    "preco_ou_estoque": 27021,
     "categoria": 2228,
-    "saude": 511,
-    "armas": 490,
-    "replica": 232,
-    "desconto_suspeito": 912,
+    "saude": 507,
+    "armas": 491,
+    "replica": 231,
+    "desconto_suspeito": 874,
     "fumo": 123,
     "bebe_seguranca": 124,
     "adulto": 58,
-    "repetido_14d": 4,
+    "repetido_14d": 2,
     "qualidade": 77
   },
   "gerados": [
     {
-      "id": "1495626487-22998814700",
-      "quando": "2026-11-18T07:15:36+00:00",
-      "titulo": "Saia Tapete Base Árvore De Natal Decoração Papai Noel Enfeite Natalino Luxo LuvinCo",
-      "preco": 29.99,
-      "nicho": "arvore de natal",
-      "gancho": "Natal de revista, preço baixo",
+      "id": "711418084-15295040993",
+      "quando": "2026-11-18T22:33:55+00:00",
+      "titulo": "FADVAN Cílios Volume Formato YY 0,05 0,07 C D L M 6-15MM Olhos de Raposa Cílios Brasileiras",
+      "preco": 10.99,
+      "nicho": "",
+      "gancho": "Não acredito nesse preço",
       "fonte": "openapi",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lk-mtnu9cc1knb5cd",
-      "preco_original": 47.6,
+      "imagem": "https://cf.shopee.com.br/file/cn-11134207-820l4-mlr77latlix1d9",
+      "preco_original": 34.34,
       "arquivos": [
-        "20261118-0715-1-capa.png",
-        "20261118-0715-1.mp4"
+        "20261118-2233-1-capa.png",
+        "20261118-2233-1.mp4"
       ],
       "publicado": false
     }
