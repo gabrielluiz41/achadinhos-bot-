@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-19T02:30:02+00:00",
+  "quando": "2026-11-19T07:15:04+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 663,
+      "produtos": 868,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "papel de presente: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error; toalha de mesa natal: 10000 error [10000]: System Error"
+      "erro": "organizador geladeira: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110663,
+  "candidatos": 110868,
   "bloqueios": {
-    "preco_ou_estoque": 27431,
+    "preco_ou_estoque": 27435,
     "saude": 480,
-    "replica": 206,
+    "replica": 207,
     "armas": 476,
     "categoria": 2165,
-    "desconto_suspeito": 873,
-    "fumo": 139,
+    "desconto_suspeito": 879,
+    "fumo": 147,
     "bebe_seguranca": 101,
-    "qualidade": 71,
+    "qualidade": 72,
     "adulto": 60,
-    "repetido_14d": 6
+    "repetido_14d": 7
   },
   "gerados": [
     {
-      "id": "1573953914-23998775294",
-      "quando": "2026-11-19T02:30:02+00:00",
-      "titulo": "Inova caixa de som blootooth Portátil Go 4 Com Bateria Esportiva À Prova D 'Água pen drive FM TWS caixinha de som",
-      "preco": 69.9,
-      "nicho": "caixa de som",
-      "gancho": "Quanto você pagaria nisso?",
+      "id": "711418084-13494334390",
+      "quando": "2026-11-19T07:15:04+00:00",
+      "titulo": "Cílios Fadvan W 4D Extensão De Cílios Alongamento W Novidade Volume Híbrido Maquiagem",
+      "preco": 21.98,
+      "nicho": "maquiagem",
+      "gancho": "Make de loja, preço baixo",
       "fonte": "openapi",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjqdt1hw2dc3ba",
-      "preco_original": 199.71,
+      "imagem": "https://cf.shopee.com.br/file/cn-11134207-7ras8-md41zddja3uz7d",
+      "preco_original": 68.69,
       "arquivos": [
-        "20261119-0230-1-capa.png",
-        "20261119-0230-1.mp4"
+        "20261119-0715-1-capa.png",
+        "20261119-0715-1.mp4"
       ],
       "publicado": false
     }
