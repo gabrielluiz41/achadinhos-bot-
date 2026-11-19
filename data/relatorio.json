@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-18T22:33:55+00:00",
+  "quando": "2026-11-19T02:30:02+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 490,
+      "produtos": 663,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "arvore de natal: 10000 error [10000]: System Error; enfeite de natal: 10000 error [10000]: System Error; toalha de mesa natal: 10000 error [10000]: System Error"
+      "erro": "papel de presente: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error; toalha de mesa natal: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110490,
+  "candidatos": 110663,
   "bloqueios": {
-    "preco_ou_estoque": 27021,
-    "categoria": 2228,
-    "saude": 507,
-    "armas": 491,
-    "replica": 231,
-    "desconto_suspeito": 874,
-    "fumo": 123,
-    "bebe_seguranca": 124,
-    "adulto": 58,
-    "repetido_14d": 2,
-    "qualidade": 77
+    "preco_ou_estoque": 27431,
+    "saude": 480,
+    "replica": 206,
+    "armas": 476,
+    "categoria": 2165,
+    "desconto_suspeito": 873,
+    "fumo": 139,
+    "bebe_seguranca": 101,
+    "qualidade": 71,
+    "adulto": 60,
+    "repetido_14d": 6
   },
   "gerados": [
     {
-      "id": "711418084-15295040993",
-      "quando": "2026-11-18T22:33:55+00:00",
-      "titulo": "FADVAN Cílios Volume Formato YY 0,05 0,07 C D L M 6-15MM Olhos de Raposa Cílios Brasileiras",
-      "preco": 10.99,
-      "nicho": "",
-      "gancho": "Não acredito nesse preço",
+      "id": "1573953914-23998775294",
+      "quando": "2026-11-19T02:30:02+00:00",
+      "titulo": "Inova caixa de som blootooth Portátil Go 4 Com Bateria Esportiva À Prova D 'Água pen drive FM TWS caixinha de som",
+      "preco": 69.9,
+      "nicho": "caixa de som",
+      "gancho": "Quanto você pagaria nisso?",
       "fonte": "openapi",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/cn-11134207-820l4-mlr77latlix1d9",
-      "preco_original": 34.34,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjqdt1hw2dc3ba",
+      "preco_original": 199.71,
       "arquivos": [
-        "20261118-2233-1-capa.png",
-        "20261118-2233-1.mp4"
+        "20261119-0230-1-capa.png",
+        "20261119-0230-1.mp4"
       ],
       "publicado": false
     }
