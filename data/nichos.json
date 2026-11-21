@@ -344,6 +344,111 @@
         "#verao",
         "#ferias"
       ]
+    },
+    {
+      "nome": "amigo secreto",
+      "peso": 2.0,
+      "termos": [
+        "amigo secreto",
+        "lembrancinha",
+        "kit presente",
+        "presente criativo"
+      ],
+      "ganchos": [
+        "Amigo secreto até 30 reais",
+        "Dona Cida tirou você"
+      ],
+      "hashtags": [
+        "#amigosecreto",
+        "#presentebarato"
+      ]
+    },
+    {
+      "nome": "luminaria",
+      "peso": 1.5,
+      "termos": [
+        "luminaria led",
+        "projetor de estrelas",
+        "abajur",
+        "luz noturna"
+      ],
+      "ganchos": [
+        "Quarto virou outro lugar",
+        "Apaga a luz e olha"
+      ],
+      "hashtags": [
+        "#decoracaoquarto",
+        "#achadinhos"
+      ]
+    },
+    {
+      "nome": "aspirador portatil",
+      "peso": 1.5,
+      "termos": [
+        "aspirador portatil",
+        "mini aspirador",
+        "aspirador sem fio"
+      ],
+      "ganchos": [
+        "Sujeira sumiu em segundos",
+        "Testei no sofá"
+      ],
+      "hashtags": [
+        "#limpeza",
+        "#casaorganizada"
+      ]
+    },
+    {
+      "nome": "organizador closet",
+      "peso": 1.5,
+      "termos": [
+        "organizador closet",
+        "cabide",
+        "organizador de gaveta",
+        "caixa organizadora"
+      ],
+      "ganchos": [
+        "Antes e depois do armário",
+        "Cabe tudo, juro"
+      ],
+      "hashtags": [
+        "#organizacao",
+        "#achadinhos"
+      ]
+    },
+    {
+      "nome": "carro",
+      "peso": 1.5,
+      "termos": [
+        "suporte veicular",
+        "organizador carro",
+        "aspirador carro",
+        "capa volante"
+      ],
+      "ganchos": [
+        "Carro do genro, versão premium"
+      ],
+      "hashtags": [
+        "#carro",
+        "#acessorioscarro"
+      ]
+    },
+    {
+      "nome": "cabelo",
+      "peso": 1.5,
+      "termos": [
+        "touca de cetim",
+        "piranha de cabelo",
+        "escova raquete",
+        "prendedor de cabelo"
+      ],
+      "ganchos": [
+        "Cabelo de salão, preço baixo"
+      ],
+      "hashtags": [
+        "#cabelo",
+        "#achadinhos"
+      ]
     }
   ]
 }

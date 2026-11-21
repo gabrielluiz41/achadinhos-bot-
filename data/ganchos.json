@@ -15,7 +15,10 @@
     "POV: não consigo parar",
     "Top 3 abaixo de 20",
     "Antes e depois em segundos",
-    "Quanto você pagaria nisso?"
+    "Quanto você pagaria nisso?",
+    "Dona Cida não aprovou isso",
+    "Reação ao preço real",
+    "Ninguém acerta esse preço"
   ],
   "sazonais": {
     "11-17_11-30": [
@@ -26,10 +29,14 @@
     ],
     "11-20_12-24": [
       "Amigo secreto resolvido",
-      "Presente bom e barato"
+      "Presente bom e barato",
+      "Top 3 presentes até 20"
     ],
     "11-25_12-20": [
       "Gasta o 13º direito"
+    ],
+    "11-21_11-30": [
+      "Testei antes da Black Friday"
     ]
   }
 }
