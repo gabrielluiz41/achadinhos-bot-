@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-21T20:52:08+00:00",
+  "quando": "2026-11-22T01:09:08+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 497,
+      "produtos": 866,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error"
+      "erro": "caneca: 10000 error [10000]: System Error; aspirador portatil: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110497,
+  "candidatos": 110866,
   "bloqueios": {
-    "preco_ou_estoque": 27254,
-    "replica": 218,
-    "categoria": 2118,
-    "desconto_suspeito": 834,
-    "saude": 465,
-    "fumo": 127,
-    "armas": 474,
-    "repetido_14d": 15,
-    "bebe_seguranca": 116,
-    "adulto": 59,
-    "qualidade": 72
+    "preco_ou_estoque": 27263,
+    "categoria": 2298,
+    "replica": 242,
+    "desconto_suspeito": 864,
+    "armas": 434,
+    "fumo": 128,
+    "bebe_seguranca": 115,
+    "saude": 474,
+    "repetido_14d": 17,
+    "adulto": 46,
+    "qualidade": 62
   },
   "gerados": [
     {
-      "id": "1534000949-22899046303",
-      "quando": "2026-11-21T20:52:08+00:00",
-      "titulo": "10M/20M LEDs Solar Luzes Corda Lâmpada Ao Ar Livre De Fadas À Prova D'água árvore de natal （luzes de Natal） disponíveis",
-      "preco": 24.9,
-      "nicho": "arvore de natal",
-      "gancho": "Testei antes da Black Friday",
+      "id": "373745451-14766183690",
+      "quando": "2026-11-22T01:09:08+00:00",
+      "titulo": "Suporte Veicular Com Imã Magnético Painel Carro Discreto Gps",
+      "preco": 12.5,
+      "nicho": "utilidades casa",
+      "gancho": "Dona Cida não aprovou isso",
       "fonte": "openapi",
-      "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-81z1k-mg3ww607ilfk2d",
-      "preco_original": 63.85,
+      "oficial": true,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-7reqg-m84xsugqx25107",
+      "preco_original": 37.88,
       "arquivos": [
-        "20261121-2052-1-capa.png",
-        "20261121-2052-1.mp4"
+        "20261122-0109-1-capa.png",
+        "20261122-0109-1.mp4"
       ],
       "publicado": false
     }
