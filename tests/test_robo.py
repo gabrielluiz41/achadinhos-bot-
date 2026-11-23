@@ -207,3 +207,27 @@ def test_openapi_mesma_interface_sem_vazar_segredo(monkeypatch):
     ts = int(cab["Authorization"].split("Timestamp=")[1].split(",")[0])
     assert cab["Authorization"].endswith(FonteOpenAPIShopee.assinatura("123", "segredo-xyz", ts, data.decode()))
     assert "segredo-xyz" not in cab["Authorization"] and "segredo-xyz" not in data.decode()
+
+
+def test_termo_mais_especifico_e_rodizio_de_nicho():
+    from bot.fontes import Produto
+    from bot.selecao import nicho_do_produto, nichos_recentes
+    nichos = json.load(open(os.path.join(AQUI, "..", "data", "nichos.json"), encoding="utf-8"))["nichos"]
+    base = _produtos()[0]
+    p = Produto(**{**base.__dict__, "titulo": "Suporte Veicular Com Imã Magnético Painel Carro",
+                   "categoria": "", "subcategoria": ""})
+    assert nicho_do_produto(p, nichos)["nome"] == "carro"
+    hist = [{"quando": "2026-11-22T06:34:52+00:00", "nicho": "arvore de natal"},
+            {"quando": "2026-11-22T21:00:07+00:00", "nicho": "pet"},
+            {"quando": "2026-11-23T01:34:20+00:00", "nicho": "enfeite natal"}]
+    assert nichos_recentes(hist) == {"pet", "enfeite natal"}
+
+
+def test_dados_do_garimpeiro_validos():
+    n = json.load(open(os.path.join(AQUI, "..", "data", "nichos.json"), encoding="utf-8"))["nichos"]
+    g = json.load(open(os.path.join(AQUI, "..", "data", "ganchos.json"), encoding="utf-8"))
+    assert len({x["nome"] for x in n}) == len(n)
+    for x in n:
+        assert x["termos"] and all(len(h.split()) <= 5 for h in x["ganchos"])
+    for h in g["gerais"] + sum(g["sazonais"].values(), []):
+        assert len(h.split()) <= 5

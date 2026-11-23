@@ -34,12 +34,35 @@ def ids_recentes(historico: list[dict], agora: datetime, dias: int = DIAS_SEM_RE
 
 
 def nicho_do_produto(p: Produto, nichos: list[dict]) -> dict | None:
+    """O termo mais longo (mais específico) vence: 'suporte veicular' ganha de 'suporte'."""
     texto = _norm(f"{p.titulo} {p.categoria} {p.subcategoria}")
+    melhor, tamanho = None, 0
     for n in nichos:
         for termo in n.get("termos", []):
-            if re.search(r"(?<![a-z])" + re.escape(_norm(termo)), texto):
-                return n
-    return None
+            t = _norm(termo)
+            if len(t) > tamanho and re.search(r"(?<![a-z])" + re.escape(t), texto):
+                melhor, tamanho = n, len(t)
+    return melhor
+
+
+RODADAS_RODIZIO = 3  # mesmo nicho no máximo 1 vez a cada 3 rodadas (Garimpeiro 22/11)
+
+
+def nichos_recentes(historico: list[dict], rodadas: int = RODADAS_RODIZIO) -> set[str]:
+    """Nichos usados nas últimas (rodadas - 1) rodadas; rodada = mesmo horário 'quando'."""
+    vistos: list[str] = []
+    por_rodada: dict[str, set[str]] = {}
+    for h in historico:
+        q = str(h.get("quando", ""))[:16]
+        if q not in por_rodada:
+            vistos.append(q)
+            por_rodada[q] = set()
+        if h.get("nicho"):
+            por_rodada[q].add(h["nicho"])
+    out: set[str] = set()
+    for q in vistos[-(rodadas - 1):] if rodadas > 1 else []:
+        out |= por_rodada[q]
+    return out
 
 
 def pontuar(p: Produto, nicho: dict | None) -> float:
@@ -94,6 +117,9 @@ def escolher(produtos: list[Produto], nichos: list[dict], historico: list[dict],
     topo = candidatos[: max(quantidade * 10, 30)]
     rnd.shuffle(topo)
     topo.sort(key=lambda x: x[0], reverse=True)
+    # Rodízio: nicho das 2 últimas rodadas vai para o fim da fila (não some se faltar opção).
+    evitar = nichos_recentes(historico)
+    topo.sort(key=lambda x: ((x[2] or {}).get("nome") in evitar, -x[0]))
     escolhidos, nichos_usados = [], set()
     for _, p, n in topo:
         chave = (n or {}).get("nome", "sem_nicho")

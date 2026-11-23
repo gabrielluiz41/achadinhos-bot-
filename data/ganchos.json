@@ -18,7 +18,13 @@
     "Quanto você pagaria nisso?",
     "Dona Cida não aprovou isso",
     "Reação ao preço real",
-    "Ninguém acerta esse preço"
+    "Ninguém acerta esse preço",
+    "Dona Cida fez a conta",
+    "Errei feio esse preço",
+    "Barato ou caro? Chuta aí",
+    "Custou menos que um lanche",
+    "Testei: vale ou não vale?",
+    "Valeu cada centavo, juro"
   ],
   "sazonais": {
     "11-17_11-30": [
@@ -37,6 +43,18 @@
     ],
     "11-21_11-30": [
       "Testei antes da Black Friday"
+    ],
+    "11-26_12-01": [
+      "Dona Cida na Black Friday"
+    ],
+    "11-28_12-01": [
+      "Última chance da Black"
+    ],
+    "12-01_12-24": [
+      "Natal inteiro gastando pouco"
+    ],
+    "12-10_12-31": [
+      "Réveillon gastando quase nada"
     ]
   }
 }
