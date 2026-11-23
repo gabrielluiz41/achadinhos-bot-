@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-23T01:34:20+00:00",
+  "quando": "2026-11-23T07:24:34+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 769,
+      "produtos": 966,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "climatizador: 10000 error [10000]: System Error; panela: 10000 error [10000]: System Error; luminaria led: 10000 error [10000]: System Error"
+      "erro": ""
     }
   },
-  "candidatos": 110769,
+  "candidatos": 110966,
   "bloqueios": {
-    "preco_ou_estoque": 27144,
-    "desconto_suspeito": 838,
+    "preco_ou_estoque": 27181,
+    "desconto_suspeito": 854,
     "replica": 202,
     "categoria": 2227,
-    "armas": 453,
-    "saude": 489,
+    "armas": 454,
+    "saude": 491,
     "bebe_seguranca": 124,
     "fumo": 136,
     "qualidade": 75,
     "adulto": 45,
-    "repetido_14d": 17
+    "repetido_14d": 18
   },
   "gerados": [
     {
-      "id": "22892006791",
-      "quando": "2026-11-23T01:34:20+00:00",
-      "titulo": "Presépio Natalino Resina Enfeite De Natal Casinha Taberna",
-      "preco": 28.9,
-      "nicho": "enfeite natal",
-      "gancho": "Natal montado com pouco",
-      "fonte": "oficial",
-      "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820le-mqrsr2mhwt1cdf",
-      "preco_original": 79.9,
+      "id": "465623800-18498287249",
+      "quando": "2026-11-23T07:24:34+00:00",
+      "titulo": "Kit 6 Tampas Panela Silicone Universal Reutilizável Elástica",
+      "preco": 10.0,
+      "nicho": "panela",
+      "gancho": "Antes e depois em segundos",
+      "fonte": "openapi",
+      "oficial": false,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-mazkrlpqx573af",
+      "preco_original": 30.3,
       "arquivos": [
-        "20261123-0134-1-capa.png",
-        "20261123-0134-1.mp4"
+        "20261123-0724-1-capa.png",
+        "20261123-0724-1.mp4"
       ],
       "publicado": false
     }
