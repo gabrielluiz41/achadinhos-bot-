@@ -449,6 +449,211 @@
         "#cabelo",
         "#achadinhos"
       ]
+    },
+    {
+      "nome": "eletroportatil",
+      "peso": 2.0,
+      "termos": [
+        "mini liquidificador",
+        "sanduicheira",
+        "chaleira eletrica",
+        "cafeteira"
+      ],
+      "ganchos": [
+        "Black Friday na cozinha",
+        "Testei antes da Black Friday"
+      ],
+      "hashtags": [
+        "#blackfriday",
+        "#cozinha"
+      ]
+    },
+    {
+      "nome": "brinquedo",
+      "peso": 1.5,
+      "termos": [
+        "quebra cabeca",
+        "massinha",
+        "pelucia",
+        "carrinho controle remoto"
+      ],
+      "ganchos": [
+        "Presente que a criança ama",
+        "Natal das crianças resolvido"
+      ],
+      "hashtags": [
+        "#natal",
+        "#presente"
+      ]
+    },
+    {
+      "nome": "ano novo",
+      "peso": 1.5,
+      "termos": [
+        "reveillon",
+        "taca acrilico",
+        "balao dourado",
+        "decoracao ano novo"
+      ],
+      "ganchos": [
+        "Réveillon gastando quase nada"
+      ],
+      "hashtags": [
+        "#anonovo",
+        "#reveillon"
+      ]
+    },
+    {
+      "nome": "power bank",
+      "peso": 1.5,
+      "termos": [
+        "power bank",
+        "carregador portatil",
+        "cabo usb c"
+      ],
+      "ganchos": [
+        "Bateria pra viagem inteira"
+      ],
+      "hashtags": [
+        "#tecnologia",
+        "#viagem"
+      ]
+    },
+    {
+      "nome": "bolsa termica",
+      "peso": 1.5,
+      "termos": [
+        "bolsa termica",
+        "caixa termica",
+        "cooler"
+      ],
+      "ganchos": [
+        "Praia com tudo gelado"
+      ],
+      "hashtags": [
+        "#verao",
+        "#praia"
+      ]
+    },
+    {
+      "nome": "petisqueira",
+      "peso": 1.5,
+      "termos": [
+        "petisqueira",
+        "tabua de frios",
+        "porta petisco"
+      ],
+      "ganchos": [
+        "Ceia de revista gastando pouco"
+      ],
+      "hashtags": [
+        "#ceiadenatal",
+        "#cozinha"
+      ]
+    },
+    {
+      "nome": "mini game",
+      "peso": 2.0,
+      "termos": [
+        "mini game",
+        "video game portatil",
+        "game retro",
+        "controle gamer"
+      ],
+      "ganchos": [
+        "Black Friday do gamer",
+        "Presente que vicia"
+      ],
+      "hashtags": [
+        "#blackfriday",
+        "#games"
+      ]
+    },
+    {
+      "nome": "smartwatch",
+      "peso": 2.0,
+      "termos": [
+        "smartwatch",
+        "relogio inteligente",
+        "pulseira inteligente"
+      ],
+      "ganchos": [
+        "Parece caro, juro que não",
+        "Presente de Natal resolvido"
+      ],
+      "hashtags": [
+        "#blackfriday",
+        "#tecnologia"
+      ]
+    },
+    {
+      "nome": "projetor portatil",
+      "peso": 1.5,
+      "termos": [
+        "projetor portatil",
+        "mini projetor",
+        "projetor led"
+      ],
+      "ganchos": [
+        "Cinema em casa por pouco",
+        "Apaga a luz e olha"
+      ],
+      "hashtags": [
+        "#achadinhos",
+        "#tecnologia"
+      ]
+    },
+    {
+      "nome": "kit ferramentas",
+      "peso": 1.5,
+      "termos": [
+        "kit ferramentas",
+        "jogo de chaves",
+        "parafusadeira",
+        "trena"
+      ],
+      "ganchos": [
+        "Presente pro pai resolvido",
+        "Testei e funcionou mesmo"
+      ],
+      "hashtags": [
+        "#natal",
+        "#presente"
+      ]
+    },
+    {
+      "nome": "bijuteria",
+      "peso": 1.5,
+      "termos": [
+        "bijuteria",
+        "brinco",
+        "colar",
+        "porta joias"
+      ],
+      "ganchos": [
+        "Parece joia, preço baixo",
+        "Amigo secreto até 30 reais"
+      ],
+      "hashtags": [
+        "#amigosecreto",
+        "#presente"
+      ]
+    },
+    {
+      "nome": "toalha de praia",
+      "peso": 1.5,
+      "termos": [
+        "toalha de praia",
+        "saida de praia",
+        "bolsa de praia"
+      ],
+      "ganchos": [
+        "Pronta pro verão gastando pouco"
+      ],
+      "hashtags": [
+        "#verao",
+        "#praia"
+      ]
     }
   ]
 }
