@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-24T02:24:12+00:00",
+  "quando": "2026-11-24T05:16:12+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 846,
+      "produtos": 970,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "arvore de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; mini game: 10000 error [10000]: System Error"
+      "erro": ""
     }
   },
-  "candidatos": 110846,
+  "candidatos": 110970,
   "bloqueios": {
     "armas": 481,
-    "preco_ou_estoque": 27171,
-    "saude": 532,
+    "preco_ou_estoque": 27173,
+    "saude": 536,
     "categoria": 2284,
-    "desconto_suspeito": 828,
-    "replica": 238,
-    "fumo": 133,
+    "desconto_suspeito": 829,
+    "replica": 240,
+    "fumo": 140,
     "bebe_seguranca": 119,
     "adulto": 69,
-    "qualidade": 74,
-    "repetido_14d": 14
+    "qualidade": 75,
+    "repetido_14d": 17
   },
   "gerados": [
     {
-      "id": "411839742-17292590903",
-      "quando": "2026-11-24T02:24:12+00:00",
-      "titulo": "Pulseira Oceano Silicone Para Smart Watch Smartwatch e Iwo 38mm 40mm 41mm 42mm 44mm 45mm 49mm Ultra serie 8",
-      "preco": 10.99,
-      "nicho": "smartwatch",
-      "gancho": "Parece caro, juro que não",
+      "id": "1366045948-22993693932",
+      "quando": "2026-11-24T05:16:12+00:00",
+      "titulo": "H'Maston CJ-02 Suporte Celular GPS Veicular Carro Universal 360° Trava Automática Ajustável",
+      "preco": 21.99,
+      "nicho": "suporte celular",
+      "gancho": "Barato ou caro? Chuta aí",
       "fonte": "openapi",
       "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134201-23020-c2wixduf3dnva4",
-      "preco_original": 35.45,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-7rblf-m5z7dbop1eji56",
+      "preco_original": 70.94,
       "arquivos": [
-        "20261124-0224-1-capa.png",
-        "20261124-0224-1.mp4"
+        "20261124-0516-1-capa.png",
+        "20261124-0516-1.mp4"
       ],
       "publicado": false
     }
