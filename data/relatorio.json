@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-24T09:45:10+00:00",
+  "quando": "2026-11-24T23:50:45+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 772,
+      "produtos": 546,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "papel de presente: 10000 error [10000]: System Error; caixa de som: 10000 error [10000]: System Error; climatizador: 10000 error [10000]: System Error"
+      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; amigo secreto: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110772,
+  "candidatos": 110546,
   "bloqueios": {
-    "armas": 481,
-    "preco_ou_estoque": 27136,
-    "saude": 530,
+    "armas": 480,
+    "preco_ou_estoque": 27161,
+    "saude": 528,
     "categoria": 2284,
-    "desconto_suspeito": 816,
-    "replica": 239,
+    "desconto_suspeito": 792,
+    "replica": 238,
     "fumo": 133,
     "bebe_seguranca": 119,
     "adulto": 69,
     "qualidade": 74,
-    "repetido_14d": 15
+    "repetido_14d": 11
   },
   "gerados": [
     {
-      "id": "338558924-23393857551",
-      "quando": "2026-11-24T09:45:10+00:00",
-      "titulo": "Jogo De Canecas Em Vidro 245ml Kit Xícaras Para Chá Café e Leite",
-      "preco": 22.9,
-      "nicho": "caneca",
-      "gancho": "Presente que ninguém devolve",
+      "id": "343841961-55870368695",
+      "quando": "2026-11-24T23:50:45+00:00",
+      "titulo": "Kit Flores de Natal para Decorar Árvore, Guirlanda e Festão",
+      "preco": 27.99,
+      "nicho": "enfeite natal",
+      "gancho": "Barato e muito útil",
       "fonte": "openapi",
       "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820ll-mscu9aobdtz9d6",
-      "preco_original": 54.52,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lv-muxfgcip70n60c",
+      "preco_original": 69.97,
       "arquivos": [
-        "20261124-0945-1-capa.png",
-        "20261124-0945-1.mp4"
+        "20261124-2350-1-capa.png",
+        "20261124-2350-1.mp4"
       ],
       "publicado": false
     }
