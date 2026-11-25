@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-25T08:19:47+00:00",
+  "quando": "2026-11-25T23:34:28+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 921,
+      "produtos": 450,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "piscina inflavel: 10000 error [10000]: System Error"
+      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110921,
+  "candidatos": 110450,
   "bloqueios": {
-    "preco_ou_estoque": 27149,
-    "categoria": 2156,
-    "armas": 484,
-    "fumo": 118,
-    "desconto_suspeito": 878,
-    "saude": 481,
+    "preco_ou_estoque": 27088,
+    "desconto_suspeito": 760,
+    "bebe_seguranca": 95,
+    "saude": 467,
+    "fumo": 143,
+    "armas": 454,
     "replica": 227,
-    "bebe_seguranca": 104,
-    "qualidade": 62,
-    "adulto": 64,
-    "repetido_14d": 20
+    "categoria": 2183,
+    "repetido_14d": 17,
+    "adulto": 57,
+    "qualidade": 63
   },
   "gerados": [
     {
-      "id": "372753581-22898892528",
-      "quando": "2026-11-25T08:19:47+00:00",
-      "titulo": "Jogo 3 ou 6 Peças Canecas Capuccino Nespresso Em Vidro Irish Coffee 130ml/230ml Chocolate Café Nespres",
-      "preco": 18.97,
-      "nicho": "caneca",
-      "gancho": "Gasta o 13º direito",
+      "id": "1495626487-18198318921",
+      "quando": "2026-11-25T23:34:28+00:00",
+      "titulo": "Arvore De Natal Pinheiro 1,5m 1,8m 2,1m 2,4m Tamanho até 1500 Galhos Tradicional Decoração LuvinCo",
+      "preco": 119.99,
+      "nicho": "arvore de natal",
+      "gancho": "Comprei e amei",
       "fonte": "openapi",
-      "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjsm627iopae61",
-      "preco_original": 49.92,
+      "oficial": true,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-820l6-muuprasup1xc3a",
+      "preco_original": 255.3,
       "arquivos": [
-        "20261125-0819-1-capa.png",
-        "20261125-0819-1.mp4"
+        "20261125-2334-1-capa.png",
+        "20261125-2334-1.mp4"
       ],
       "publicado": false
     }
