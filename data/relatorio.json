@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-24T23:50:45+00:00",
+  "quando": "2026-11-25T04:05:51+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 546,
+      "produtos": 822,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; amigo secreto: 10000 error [10000]: System Error"
+      "erro": "mini game: 10000 error [10000]: System Error; piscina inflavel: 10000 error [10000]: System Error; luminaria led: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110546,
+  "candidatos": 110822,
   "bloqueios": {
-    "armas": 480,
-    "preco_ou_estoque": 27161,
-    "saude": 528,
-    "categoria": 2284,
-    "desconto_suspeito": 792,
-    "replica": 238,
-    "fumo": 133,
-    "bebe_seguranca": 119,
-    "adulto": 69,
-    "qualidade": 74,
-    "repetido_14d": 11
+    "preco_ou_estoque": 27150,
+    "categoria": 2156,
+    "armas": 484,
+    "fumo": 118,
+    "desconto_suspeito": 872,
+    "saude": 477,
+    "replica": 226,
+    "bebe_seguranca": 104,
+    "qualidade": 62,
+    "adulto": 64,
+    "repetido_14d": 19
   },
   "gerados": [
     {
-      "id": "343841961-55870368695",
-      "quando": "2026-11-24T23:50:45+00:00",
-      "titulo": "Kit Flores de Natal para Decorar Árvore, Guirlanda e Festão",
-      "preco": 27.99,
-      "nicho": "enfeite natal",
-      "gancho": "Barato e muito útil",
+      "id": "733998429-20297618642",
+      "quando": "2026-11-25T04:05:51+00:00",
+      "titulo": "Smartwatch D20 relógio Colocar foto com tela hd y68 bluetooth com lembrete chamada monitor de frequência",
+      "preco": 21.98,
+      "nicho": "smartwatch",
+      "gancho": "Todo mundo precisa disso",
       "fonte": "openapi",
       "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lv-muxfgcip70n60c",
-      "preco_original": 69.97,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-7rbk0-lqqgjmiq5mao68",
+      "preco_original": 70.9,
       "arquivos": [
-        "20261124-2350-1-capa.png",
-        "20261124-2350-1.mp4"
+        "20261125-0405-1-capa.png",
+        "20261125-0405-1.mp4"
       ],
       "publicado": false
     }
