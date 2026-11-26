@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-25T23:34:28+00:00",
+  "quando": "2026-11-26T03:30:03+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 450,
+      "produtos": 847,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error"
+      "erro": "arvore de natal: 10000 error [10000]: System Error; enfeite de natal: 10000 error [10000]: System Error; climatizador: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110450,
+  "candidatos": 110847,
   "bloqueios": {
-    "preco_ou_estoque": 27088,
-    "desconto_suspeito": 760,
+    "preco_ou_estoque": 27094,
+    "desconto_suspeito": 783,
     "bebe_seguranca": 95,
-    "saude": 467,
-    "fumo": 143,
+    "saude": 479,
+    "fumo": 150,
     "armas": 454,
-    "replica": 227,
+    "replica": 228,
     "categoria": 2183,
-    "repetido_14d": 17,
+    "repetido_14d": 15,
     "adulto": 57,
-    "qualidade": 63
+    "qualidade": 64
   },
   "gerados": [
     {
-      "id": "1495626487-18198318921",
-      "quando": "2026-11-25T23:34:28+00:00",
-      "titulo": "Arvore De Natal Pinheiro 1,5m 1,8m 2,1m 2,4m Tamanho até 1500 Galhos Tradicional Decoração LuvinCo",
-      "preco": 119.99,
-      "nicho": "arvore de natal",
-      "gancho": "Comprei e amei",
+      "id": "711418084-23791198536",
+      "quando": "2026-11-26T03:30:03+00:00",
+      "titulo": "Pestanas Fadvan Real 6D W 0.07 Extensões De C/D/L 8-15mm Profissionais Suaves Naturais",
+      "preco": 25.98,
+      "nicho": "",
+      "gancho": "Dona Cida na Black Friday",
       "fonte": "openapi",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820l6-muuprasup1xc3a",
-      "preco_original": 255.3,
+      "imagem": "https://cf.shopee.com.br/file/cn-11134207-7ras8-md42fkshitxnbd",
+      "preco_original": 83.81,
       "arquivos": [
-        "20261125-2334-1-capa.png",
-        "20261125-2334-1.mp4"
+        "20261126-0330-1-capa.png",
+        "20261126-0330-1.mp4"
       ],
       "publicado": false
     }
