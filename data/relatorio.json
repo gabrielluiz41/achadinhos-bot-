@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-26T03:30:03+00:00",
+  "quando": "2026-11-26T08:14:12+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 847,
+      "produtos": 923,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "arvore de natal: 10000 error [10000]: System Error; enfeite de natal: 10000 error [10000]: System Error; climatizador: 10000 error [10000]: System Error"
+      "erro": "mini processador: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110847,
+  "candidatos": 110923,
   "bloqueios": {
-    "preco_ou_estoque": 27094,
-    "desconto_suspeito": 783,
+    "preco_ou_estoque": 27127,
+    "desconto_suspeito": 782,
     "bebe_seguranca": 95,
-    "saude": 479,
+    "saude": 481,
     "fumo": 150,
     "armas": 454,
-    "replica": 228,
+    "replica": 229,
     "categoria": 2183,
-    "repetido_14d": 15,
+    "repetido_14d": 25,
     "adulto": 57,
     "qualidade": 64
   },
   "gerados": [
     {
-      "id": "711418084-23791198536",
-      "quando": "2026-11-26T03:30:03+00:00",
-      "titulo": "Pestanas Fadvan Real 6D W 0.07 Extensões De C/D/L 8-15mm Profissionais Suaves Naturais",
-      "preco": 25.98,
-      "nicho": "",
-      "gancho": "Dona Cida na Black Friday",
+      "id": "1744896751-22899556632",
+      "quando": "2026-11-26T08:14:12+00:00",
+      "titulo": "Festão Aramado Galhos Verde Crua Enfeite de Natal Rattan Decoração Natalina Ambientes Diversos",
+      "preco": 29.99,
+      "nicho": "enfeite natal",
+      "gancho": "Achei e é barato",
       "fonte": "openapi",
-      "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/cn-11134207-7ras8-md42fkshitxnbd",
-      "preco_original": 83.81,
+      "oficial": false,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-llfonocbbfvae6",
+      "preco_original": 74.97,
       "arquivos": [
-        "20261126-0330-1-capa.png",
-        "20261126-0330-1.mp4"
+        "20261126-0814-1-capa.png",
+        "20261126-0814-1.mp4"
       ],
       "publicado": false
     }
