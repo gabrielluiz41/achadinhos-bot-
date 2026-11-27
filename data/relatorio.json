@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-26T23:43:10+00:00",
+  "quando": "2026-11-27T03:36:19+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 624,
+      "produtos": 895,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "papel de presente: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error; caneca: 10000 error [10000]: System Error"
+      "erro": "enfeite de natal: 10000 error [10000]: System Error; fita led rgb: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110624,
+  "candidatos": 110895,
   "bloqueios": {
-    "preco_ou_estoque": 27239,
+    "preco_ou_estoque": 27249,
     "categoria": 2250,
     "saude": 487,
-    "armas": 487,
+    "armas": 488,
     "bebe_seguranca": 115,
-    "desconto_suspeito": 805,
-    "replica": 229,
+    "desconto_suspeito": 837,
+    "replica": 230,
     "adulto": 55,
-    "fumo": 141,
-    "qualidade": 63,
-    "repetido_14d": 18
+    "fumo": 148,
+    "qualidade": 64,
+    "repetido_14d": 26
   },
   "gerados": [
     {
-      "id": "1614832008-45718109824",
-      "quando": "2026-11-26T23:43:10+00:00",
-      "titulo": "Laço Veludo Grande Para Enfeite Arvore de Natal Vermelho Decoração Luxo Alta Qualidade Laço Gigante Estruturado",
-      "preco": 26.99,
-      "nicho": "arvore de natal",
-      "gancho": "Reação ao preço real",
-      "fonte": "openapi",
-      "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820m0-mvc1r4bmxwcj06",
-      "preco_original": 69.21,
+      "id": "41334371007",
+      "quando": "2026-11-27T03:36:19+00:00",
+      "titulo": "Kit Mini Rosas EVA 144 Unidades 2cm com Cabinho para Artesanato e Lembrancinhas",
+      "preco": 17.9,
+      "nicho": "amigo secreto",
+      "gancho": "Black Friday de verdade",
+      "fonte": "oficial",
+      "oficial": true,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-8258s-ms2oy6qxghz6dc",
+      "preco_original": 49.9,
       "arquivos": [
-        "20261126-2343-1-capa.png",
-        "20261126-2343-1.mp4"
+        "20261127-0336-1-capa.png",
+        "20261127-0336-1.mp4"
       ],
       "publicado": false
     }
