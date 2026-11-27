@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-27T08:13:16+00:00",
+  "quando": "2026-11-27T23:22:27+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 919,
+      "produtos": 600,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "toalha de mesa natal: 10000 error [10000]: System Error"
+      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; caneca: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110919,
+  "candidatos": 110600,
   "bloqueios": {
-    "preco_ou_estoque": 27250,
+    "preco_ou_estoque": 27246,
     "categoria": 2250,
-    "saude": 487,
+    "saude": 479,
     "armas": 488,
     "bebe_seguranca": 115,
-    "desconto_suspeito": 843,
-    "replica": 230,
+    "desconto_suspeito": 817,
+    "replica": 228,
     "adulto": 55,
-    "fumo": 148,
-    "qualidade": 64,
-    "repetido_14d": 29
+    "fumo": 141,
+    "qualidade": 63,
+    "repetido_14d": 25
   },
   "gerados": [
     {
-      "id": "409002919-22594369585",
-      "quando": "2026-11-27T08:13:16+00:00",
-      "titulo": "Kit 12/24/48 Bolinhas Bola de Natal 5CM Decoração Para Arvore Natalina Luxo Enfeites Dourado Vermelho Premium",
-      "preco": 17.79,
-      "nicho": "enfeite natal",
-      "gancho": "Preço de Black Friday",
-      "fonte": "openapi",
-      "oficial": false,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-81z1k-meg7h2upvvuq16",
-      "preco_original": 48.08,
+      "id": "47015852613",
+      "quando": "2026-11-27T23:22:27+00:00",
+      "titulo": "Kit 3 Enfeite para Árvore Natal Decoração Natalina para Casa",
+      "preco": 16.9,
+      "nicho": "arvore de natal",
+      "gancho": "Dona Cida fez a conta",
+      "fonte": "oficial",
+      "oficial": true,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-8259u-mrrkyrprf6ys54",
+      "preco_original": 49.9,
       "arquivos": [
-        "20261127-0813-1-capa.png",
-        "20261127-0813-1.mp4"
+        "20261127-2322-1-capa.png",
+        "20261127-2322-1.mp4"
       ],
       "publicado": false
     }
