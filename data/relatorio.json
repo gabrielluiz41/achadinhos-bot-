@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-27T23:22:27+00:00",
+  "quando": "2026-11-28T03:13:41+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 600,
+      "produtos": 969,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": "enfeite de natal: 10000 error [10000]: System Error; papel de presente: 10000 error [10000]: System Error; caneca: 10000 error [10000]: System Error"
+      "erro": ""
     }
   },
-  "candidatos": 110600,
+  "candidatos": 110969,
   "bloqueios": {
-    "preco_ou_estoque": 27246,
-    "categoria": 2250,
-    "saude": 479,
-    "armas": 488,
-    "bebe_seguranca": 115,
-    "desconto_suspeito": 817,
-    "replica": 228,
-    "adulto": 55,
-    "fumo": 141,
-    "qualidade": 63,
-    "repetido_14d": 25
+    "preco_ou_estoque": 27200,
+    "categoria": 2223,
+    "desconto_suspeito": 883,
+    "armas": 466,
+    "saude": 515,
+    "replica": 237,
+    "adulto": 46,
+    "bebe_seguranca": 100,
+    "repetido_14d": 28,
+    "fumo": 135,
+    "qualidade": 64
   },
   "gerados": [
     {
-      "id": "47015852613",
-      "quando": "2026-11-27T23:22:27+00:00",
-      "titulo": "Kit 3 Enfeite para Árvore Natal Decoração Natalina para Casa",
-      "preco": 16.9,
-      "nicho": "arvore de natal",
-      "gancho": "Dona Cida fez a conta",
+      "id": "45964865201",
+      "quando": "2026-11-28T03:13:41+00:00",
+      "titulo": "Kit Potes de Vidro Com Rolha Cortiça 100ml Temperos Condimentos Vela Artesanal Lembrancinhas Doces - Rizzo Distribuidora",
+      "preco": 29.9,
+      "nicho": "amigo secreto",
+      "gancho": "Última chance da Black",
       "fonte": "oficial",
       "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/sg-11134201-8259u-mrrkyrprf6ys54",
-      "preco_original": 49.9,
+      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lq-mr36jp1nev45f9",
+      "preco_original": 79.98,
       "arquivos": [
-        "20261127-2322-1-capa.png",
-        "20261127-2322-1.mp4"
+        "20261128-0313-1-capa.png",
+        "20261128-0313-1.mp4"
       ],
       "publicado": false
     }
