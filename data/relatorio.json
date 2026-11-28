@@ -1,5 +1,5 @@
 {
-  "quando": "2026-11-28T03:13:41+00:00",
+  "quando": "2026-11-28T07:37:30+00:00",
   "fontes": {
     "oficial": {
       "ok": true,
@@ -57,7 +57,7 @@
     },
     "openapi": {
       "ok": true,
-      "produtos": 969,
+      "produtos": 919,
       "colunas": [
         "itemId",
         "shopId",
@@ -75,38 +75,38 @@
         "commissionRate",
         "productCatIds"
       ],
-      "erro": ""
+      "erro": "toalha de mesa natal: 10000 error [10000]: System Error"
     }
   },
-  "candidatos": 110969,
+  "candidatos": 110919,
   "bloqueios": {
-    "preco_ou_estoque": 27200,
+    "preco_ou_estoque": 27201,
     "categoria": 2223,
-    "desconto_suspeito": 883,
+    "desconto_suspeito": 876,
     "armas": 466,
     "saude": 515,
     "replica": 237,
     "adulto": 46,
     "bebe_seguranca": 100,
-    "repetido_14d": 28,
+    "repetido_14d": 30,
     "fumo": 135,
     "qualidade": 64
   },
   "gerados": [
     {
-      "id": "45964865201",
-      "quando": "2026-11-28T03:13:41+00:00",
-      "titulo": "Kit Potes de Vidro Com Rolha Cortiça 100ml Temperos Condimentos Vela Artesanal Lembrancinhas Doces - Rizzo Distribuidora",
-      "preco": 29.9,
-      "nicho": "amigo secreto",
-      "gancho": "Última chance da Black",
-      "fonte": "oficial",
-      "oficial": true,
-      "imagem": "https://cf.shopee.com.br/file/br-11134207-820lq-mr36jp1nev45f9",
-      "preco_original": 79.98,
+      "id": "375201738-58254975674",
+      "quando": "2026-11-28T07:37:30+00:00",
+      "titulo": "Lápis De Sobrancelha Líquido À Prova D'água, De Longa Duração , Definição Natural , Maquiagem Acessível",
+      "preco": 11.99,
+      "nicho": "maquiagem",
+      "gancho": "Ninguém acerta esse preço",
+      "fonte": "openapi",
+      "oficial": false,
+      "imagem": "https://cf.shopee.com.br/file/sg-11134201-82620-mkjr5fqpg26e40",
+      "preco_original": 32.41,
       "arquivos": [
-        "20261128-0313-1-capa.png",
-        "20261128-0313-1.mp4"
+        "20261128-0737-1-capa.png",
+        "20261128-0737-1.mp4"
       ],
       "publicado": false
     }
